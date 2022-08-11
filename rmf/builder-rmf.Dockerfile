@@ -1,4 +1,4 @@
-FROM ghcr.io/junhaochng/rmf_deployment_template/builder-rosdep
+FROM ghcr.io/sharp-rmf/rmf-deployment/builder-rosdep
 
 ARG NETRC
 
@@ -7,7 +7,7 @@ ARG NETRC
 SHELL ["bash", "-c"]
 
 ENV DEBIAN_FRONTEND=noninteractive
-ENV DEMO_NAME=galen
+# ENV DEMO_NAME=galen
 
 # RUN apt update
 # RUN mkdir -p /opt/rmf/src

@@ -1,4 +1,4 @@
-FROM ghcr.io/junhaochng/rmf_deployment_template/builder-rosdep-simulation
+FROM ghcr.io/sharp-rmf/rmf-deployment/builder-rosdep-simulation
 
 ARG NETRC
 

@@ -1,8 +1,6 @@
 # rmf-deployment
 
-This repo focuses on launching RMF through Dockerfiles.
-
-The deployment will be using the <code>main</code> branch of RMF.
+This repo focuses on launching RMF through Dockerfiles, the version of RMF used will be the <code>main</code> branch of RMF. The main branch will be using <code> ROS2 Galactic </code>.
 
 During deployment, for RMF core, only the stuff in the <code>rmf</code> needs to be executed.
 
