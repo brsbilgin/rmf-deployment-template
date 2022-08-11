@@ -1,0 +1,27 @@
+{
+  "world_name" : "galen",  
+  "valid_task": ["Delivery", "Loop","Charging"],
+  "task": {
+    "Delivery": {
+      "option": {
+      }
+    },
+    "Loop": {
+      "places": [
+        "n_start",
+        "n_end",
+        "p3",
+        "p4"
+      ]
+    },
+    "Clean": {
+    },
+    "Station": {
+    },
+    "Patrol": {
+    },
+    "Charging": {
+
+    }
+  }
+}
