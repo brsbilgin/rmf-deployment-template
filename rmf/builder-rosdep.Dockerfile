@@ -30,7 +30,7 @@ RUN rosdep update --rosdistro $ROS_DISTRO
 
 # This replaces: wget https://raw.githubusercontent.com/open-rmf/rmf/main/rmf.repos
 ENV DEBIAN_FRONTEND=noninteractive
-COPY rmf.repos rmf.repos
+COPY rmf/rmf.repos rmf.repos
 RUN vcs import src < rmf.repos \
     && apt-get update \
     && apt-get upgrade -y \

@@ -1,4 +1,4 @@
-FROM ghcr.io/junhaochng/rmf_deployment_template/builder-rmf-simulation
+FROM ghcr.io/sharp-rmf/rmf-deployment/builder-rmf-simulation
 
 SHELL ["bash", "-c"]
 

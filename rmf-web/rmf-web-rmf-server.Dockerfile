@@ -1,4 +1,4 @@
-FROM ghcr.io/junhaochng/rmf_deployment_template/builder-rmf-web
+FROM ghcr.io/sharp-rmf/rmf-deployment/builder-rmf-web
 
 SHELL ["bash", "-c"]
 
@@ -8,7 +8,7 @@ RUN . /opt/rmf/install/setup.bash && \
   cd /opt/rmf/src/rmf-web && \
   cd /opt/rmf/src/rmf-web/packages/api-server && npm run prepack
 
-FROM ghcr.io/junhaochng/rmf_deployment_template/builder-rmf-web
+FROM ghcr.io/sharp-rmf/rmf-deployment/builder-rmf-web
 
 COPY --from=0 /opt/rmf/src/rmf-web/packages/api-server/dist/ .
 
