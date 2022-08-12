@@ -84,20 +84,20 @@ jobs:
           file: rmf/rmf-door-supervisor.Dockerfile
           push: true
           tags: ghcr.io/sharp-rmf/rmf-deployment/rmf-door-supervisor:latest
-      - name: Build rmf-fleet-adapter
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          file: rmf/rmf-fleet-adapter.Dockerfile
-          push: true
-          tags: ghcr.io/sharp-rmf/rmf-deployment/rmf-fleet-adapter:latest
-      - name: Build rmf-free-fleet-server
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          file: rmf/rmf-free-fleet-server.Dockerfile
-          push: true
-          tags: ghcr.io/sharp-rmf/rmf-deployment/rmf-free-fleet-server:latest
+#       - name: Build rmf-fleet-adapter
+#         uses: docker/build-push-action@v3
+#         with:
+#           context: .
+#           file: rmf/rmf-fleet-adapter.Dockerfile
+#           push: true
+#           tags: ghcr.io/sharp-rmf/rmf-deployment/rmf-fleet-adapter:latest
+#       - name: Build rmf-free-fleet-server
+#         uses: docker/build-push-action@v3
+#         with:
+#           context: .
+#           file: rmf/rmf-free-fleet-server.Dockerfile
+#           push: true
+#           tags: ghcr.io/sharp-rmf/rmf-deployment/rmf-free-fleet-server:latest
       - name: Build rmf-lift-supervisor
         uses: docker/build-push-action@v3
         with:
