@@ -38,7 +38,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: rmf
-          file: ./builder-rmf.Dockerfile
+          file: rmf/builder-rmf.Dockerfile
           push: true
           tags: ghcr.io/sharp-rmf/rmf-deployment/builder-rmf:latest
       # -
