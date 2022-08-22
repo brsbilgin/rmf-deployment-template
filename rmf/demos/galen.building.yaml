@@ -1,7 +1,7 @@
 coordinate_system: reference_image
 crowd_sim:
   agent_groups:
-    - {agents_name: [tinyRobot1, tinyRobot8, tinyRobot2, tinyRobot3, tinyRobot6, tinyRobot7, tinyRobot4, tinyRobot5, tinyRobot13, tinyRobot12, tinyRobot11, tinyRobot10, tinyRobot9, tinyRobot15, tinyRobot14, tinyRobot1, tinyRobot2, tinyRobot1, tinyRobot1, tinyRobot1, tinyRobot1, tinyRobot1, tinyRobot1, tinyRobot1, tinyRobot1, tinyRobot1, tinyRobot1, tinyRobot1, tinyRobot1, tinyRobot1], agents_number: 30, group_id: 0, profile_selector: external_agent, state_selector: external_static, x: 0, y: 0}
+    - {agents_name: [tinyRobotA1, tinyRobotH1, tinyRobotB1, tinyRobotC1, tinyRobotF1, tinyRobotG1, tinyRobotD1, tinyRobotE1, tinyRobotJ1, tinyRobotI1], agents_number: 10, group_id: 0, profile_selector: external_agent, state_selector: external_static, x: 0, y: 0}
   agent_profiles:
     - {ORCA_tau: 1, ORCA_tauObst: 0.4, class: 1, max_accel: 0, max_angle_vel: 0, max_neighbors: 10, max_speed: 0, name: external_agent, neighbor_dist: 5, obstacle_set: 1, pref_speed: 0, r: 0.25}
   enable: 0
@@ -32,6 +32,9 @@ levels:
       - [183.399, 249.167, fid3]
       - [182.964, 313.012, fid4]
       - [104.537, 248.244, fid1]
+    floors:
+      - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
+        vertices: [28, 29, 30, 31]
     lanes:
       - [7, 8, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [9, 11, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
@@ -75,34 +78,38 @@ levels:
       - [4, 5, {distance: [3, 6.6]}]
       - [3, 6, {distance: [3, 5.4]}]
     vertices:
-      - [126.672, 128.416, 0, l1_1, {is_charger: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, tinyRobot1], spawn_robot_type: [1, TinyRobot]}]
-      - [127.38, 100.442, 0, ""]
+      - [126.672, 128.416, 0, l1_1, {is_charger: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, tinyRobotA1], spawn_robot_type: [1, TinyRobot]}]
+      - [127.38, 100.442, 0, l1_test]
       - [10612.988, 5955.442, 0, ""]
       - [184.989, 312.975, 0, ""]
       - [263.367, 313.465, 0, ""]
       - [341.746, 313.955, 0, ""]
       - [184.499, 249.293, 0, ""]
       - [125.865, 65.863, 0, ""]
-      - [128.366, 48.207, 0, l1_8, {is_charger: [4, true], spawn_robot_name: [1, tinyRobot8], spawn_robot_type: [1, TinyRobot]}]
+      - [128.366, 48.207, 0, l1_8, {spawn_robot_name: [1, tinyRobotH1], spawn_robot_type: [1, TinyRobot]}]
       - [91.916, 67.279, 0, "", {lift_cabin: [1, B]}]
       - [91.916, 101.41, 0, "", {lift_cabin: [1, A]}]
       - [111.295, 66.70399999999999, 0, ""]
       - [109.633, 101.588, 0, ""]
-      - [153.997, 115.714, 0, l1_2, {spawn_robot_name: [1, tinyRobot2], spawn_robot_type: [1, TinyRobot]}]
-      - [154.505, 99.075, 0, l1_3, {spawn_robot_name: [1, tinyRobot3], spawn_robot_type: [1, TinyRobot]}]
-      - [153.489, 65.67, 0, l1_6, {spawn_robot_name: [1, tinyRobot6], spawn_robot_type: [1, TinyRobot]}]
-      - [145.614, 53.223, 0, l1_7, {spawn_robot_name: [1, tinyRobot7], spawn_robot_type: [1, TinyRobot]}]
-      - [149.425, 87.898, 0, l1_4, {spawn_robot_name: [1, tinyRobot4], spawn_robot_type: [1, TinyRobot]}]
-      - [144.09, 77.991, 0, l1_5, {spawn_robot_name: [1, tinyRobot5], spawn_robot_type: [1, TinyRobot]}]
+      - [153.997, 115.714, 0, l1_2, {spawn_robot_name: [1, tinyRobotB1], spawn_robot_type: [1, TinyRobot]}]
+      - [154.505, 99.075, 0, l1_3, {spawn_robot_name: [1, tinyRobotC1], spawn_robot_type: [1, TinyRobot]}]
+      - [153.489, 65.67, 0, l1_6, {spawn_robot_name: [1, tinyRobotF1], spawn_robot_type: [1, TinyRobot]}]
+      - [145.614, 53.223, 0, l1_7, {spawn_robot_name: [1, tinyRobotG1], spawn_robot_type: [1, TinyRobot]}]
+      - [149.425, 87.898, 0, l1_4, {spawn_robot_name: [1, tinyRobotD1], spawn_robot_type: [1, TinyRobot]}]
+      - [144.09, 77.991, 0, l1_5, {spawn_robot_name: [1, tinyRobotE1], spawn_robot_type: [1, TinyRobot]}]
       - [91.916, 33.778, 0, "", {lift_cabin: [1, C]}]
       - [112.108, 34.125, 0, ""]
-      - [113.561, 11.943, 0, l1_13, {spawn_robot_name: [1, tinyRobot13], spawn_robot_type: [1, TinyRobot]}]
-      - [130.174, 15.635, 0, l1_12, {spawn_robot_name: [1, tinyRobot12], spawn_robot_type: [1, TinyRobot]}]
-      - [139.057, 24.864, 0, l1_11, {spawn_robot_name: [1, tinyRobot11], spawn_robot_type: [1, TinyRobot]}]
-      - [139.749, 37.555, 0, l1_10, {spawn_robot_name: [1, tinyRobot10], spawn_robot_type: [1, TinyRobot]}]
-      - [112.292, 47.938, 0, l1_9, {spawn_robot_name: [1, tinyRobot9], spawn_robot_type: [1, TinyRobot]}]
-      - [157.575, 39.833, 0, l1_15, {spawn_robot_name: [1, tinyRobot15], spawn_robot_type: [1, TinyRobot]}]
-      - [99.39700000000001, 12.063, 0, l1_14, {spawn_robot_name: [1, tinyRobot14], spawn_robot_type: [1, TinyRobot]}]
+      - [113.561, 11.943, 0, l1_13]
+      - [130.174, 15.635, 0, l1_12]
+      - [139.057, 24.864, 0, l1_11]
+      - [139.749, 37.555, 0, l1_10, {spawn_robot_name: [1, tinyRobotJ1], spawn_robot_type: [1, TinyRobot]}]
+      - [112.292, 47.938, 0, l1_9, {spawn_robot_name: [1, tinyRobotI1], spawn_robot_type: [1, TinyRobot]}]
+      - [157.575, 39.833, 0, l1_15]
+      - [99.39700000000001, 12.063, 0, l1_14]
+      - [51.821, -9.087, 0, ""]
+      - [188.137, -5.754, 0, ""]
+      - [189.47, 157.224, 0, ""]
+      - [45.822, 164.557, 0, ""]
   L5:
     drawing:
       filename: pics/lvl5_floorplan.png
@@ -112,6 +119,9 @@ levels:
       - [1258.451, 184.295, fid2]
       - [1256.925, 375.558, fid3]
       - [1259.977, 464.067, fid4]
+    floors:
+      - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
+        vertices: [23, 24, 26, 25]
     lanes:
       - [3, 5, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
       - [5, 1, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
@@ -140,27 +150,31 @@ levels:
     vertices:
       - [1178, 169.531, 0, ""]
       - [1178.361, 122.46, 0, m_lift]
-      - [1185.24, 85.023, 0, l2_8, {is_charger: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, tinyRobot1], spawn_robot_type: [1, TinyRobot]}]
+      - [1185.24, 85.023, 0, l2_8]
       - [1130.955, 120.308, 0, "", {lift_cabin: [1, B]}]
       - [1130.955, 168.033, 0, "", {lift_cabin: [1, A]}]
       - [1158.539, 120.945, 0, ""]
       - [1153.909, 168.563, 0, ""]
-      - [1176.789, 204.787, 0, l2_1, {spawn_robot_name: [1, tinyRobot2], spawn_robot_type: [1, TinyRobot]}]
-      - [1199.484, 198.453, 0, l2_2, {spawn_robot_name: [1, tinyRobot1], spawn_robot_type: [1, TinyRobot]}]
-      - [1206.304, 171.173, 0, l2_3, {spawn_robot_name: [1, tinyRobot1], spawn_robot_type: [1, TinyRobot]}]
-      - [1204.486, 148.289, 0, l2_4, {spawn_robot_name: [1, tinyRobot1], spawn_robot_type: [1, TinyRobot]}]
-      - [1200.09, 136.316, 0, l2_5, {spawn_robot_name: [1, tinyRobot1], spawn_robot_type: [1, TinyRobot]}]
-      - [1206.153, 121.16, 0, l2_6, {spawn_robot_name: [1, tinyRobot1], spawn_robot_type: [1, TinyRobot]}]
-      - [1202.97, 99.943, 0, l2_7, {spawn_robot_name: [1, tinyRobot1], spawn_robot_type: [1, TinyRobot]}]
+      - [1176.789, 204.787, 0, l2_1]
+      - [1199.484, 198.453, 0, l2_2]
+      - [1206.304, 171.173, 0, l2_3]
+      - [1204.486, 148.289, 0, l2_4]
+      - [1200.09, 136.316, 0, l2_5]
+      - [1206.153, 121.16, 0, l2_6]
+      - [1202.97, 99.943, 0, l2_7]
       - [1130.955, 73.465, 0, "", {lift_cabin: [1, C]}]
       - [1160.958, 73.154, 0, ""]
-      - [1150.414, 42.173, 0, l2_14, {spawn_robot_name: [1, tinyRobot1], spawn_robot_type: [1, TinyRobot]}]
-      - [1173.609, 42.011, 0, l2_13, {spawn_robot_name: [1, tinyRobot1], spawn_robot_type: [1, TinyRobot]}]
-      - [1195.182, 49.796, 0, l2_12, {spawn_robot_name: [1, tinyRobot1], spawn_robot_type: [1, TinyRobot]}]
-      - [1203.779, 67.476, 0, l2_11, {spawn_robot_name: [1, tinyRobot1], spawn_robot_type: [1, TinyRobot]}]
-      - [1163.553, 100.241, 0, l2_10, {spawn_robot_name: [1, tinyRobot1], spawn_robot_type: [1, TinyRobot]}]
-      - [1229.404, 82.53100000000001, 0, l2_15, {spawn_robot_name: [1, tinyRobot1], spawn_robot_type: [1, TinyRobot]}]
-      - [1143.92, 102.167, 0, l2_9, {spawn_robot_name: [1, tinyRobot1], spawn_robot_type: [1, TinyRobot]}]
+      - [1150.414, 42.173, 0, l2_14]
+      - [1173.609, 42.011, 0, l2_13]
+      - [1195.182, 49.796, 0, l2_12]
+      - [1203.779, 67.476, 0, l2_11]
+      - [1163.553, 100.241, 0, l2_10]
+      - [1229.404, 82.53100000000001, 0, l2_15]
+      - [1143.92, 102.167, 0, l2_9]
+      - [1072.723, 12.668, 0, ""]
+      - [1263.105, 14.306, 0, ""]
+      - [1067.153, 235.49, 0, ""]
+      - [1272.936, 234.507, 0, ""]
 lifts:
   A:
     depth: 1
