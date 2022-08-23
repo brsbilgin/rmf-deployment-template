@@ -2,7 +2,7 @@ version: "3.7"
 services:
 
   rmf-building-map-server:
-    image: ${REGISTRY_URL}/rmf_deployment_template/rmf-building-map-server
+    image: ${REGISTRY_URL}/rmf-deployment/rmf-building-map-server
     build:
       context: .
       dockerfile: rmf/rmf-building-map-server.Dockerfile
@@ -25,9 +25,7 @@ services:
       - type: bind
         source: ${NAV_GRAPH_FILES}
         target: ${NAV_GRAPH_FILES_MOUNTPATH}
-      - type: bind
-        source: ${FLEET_LAUNCH_FILE}
-        target: ${FLEET_LAUNCH_FILE_MOUNTPATH}
+
     network_mode: host
     environment:
       - BUILDING_CONFIG_FILE_MOUNTPATH=${BUILDING_CONFIG_FILE_MOUNTPATH}
@@ -37,7 +35,7 @@ services:
       - RMF_USE_SIM_TIME=${RMF_USE_SIM_TIME}
 
   rmf-door-supervisor:
-    image: ${REGISTRY_URL}/rmf_deployment_template/rmf-door-supervisor
+    image: ${REGISTRY_URL}/rmf-deployment/rmf-door-supervisor
     build:
       context: .
       dockerfile: rmf/rmf-door-supervisor.Dockerfile
@@ -57,7 +55,7 @@ services:
       - RMF_USE_SIM_TIME=${RMF_USE_SIM_TIME}
 
   rmf-fleet-adapter-tinyA:
-    image: ${REGISTRY_URL}/rmf_deployment_template/rmf-fleet-adapter
+    image: ${REGISTRY_URL}/rmf-deployment/rmf-fleet-adapter
     build:
       context: .
       dockerfile: rmf/rmf-fleet-adapter.Dockerfile
@@ -103,7 +101,7 @@ services:
       - RMF_FLEET_ADAPTER_SERVER_URI=${TINYROBOTA_RMF_FLEET_ADAPTER_SERVER_URI}
 
   rmf-fleet-adapter-tinyB:
-    image: ${REGISTRY_URL}/rmf_deployment_template/rmf-fleet-adapter
+    image: ${REGISTRY_URL}/rmf-deployment/rmf-fleet-adapter
     build:
       context: .
       dockerfile: rmf/rmf-fleet-adapter.Dockerfile
@@ -149,7 +147,7 @@ services:
       - RMF_FLEET_ADAPTER_SERVER_URI=${TINYROBOTB_RMF_FLEET_ADAPTER_SERVER_URI}
 
   rmf-fleet-adapter-tinyC:
-    image: ${REGISTRY_URL}/rmf_deployment_template/rmf-fleet-adapter
+    image: ${REGISTRY_URL}/rmf-deployment/rmf-fleet-adapter
     build:
       context: .
       dockerfile: rmf/rmf-fleet-adapter.Dockerfile
@@ -195,7 +193,7 @@ services:
       - RMF_FLEET_ADAPTER_SERVER_URI=${TINYROBOTC_RMF_FLEET_ADAPTER_SERVER_URI}
 
   rmf-fleet-adapter-tinyD:
-    image: ${REGISTRY_URL}/rmf_deployment_template/rmf-fleet-adapter
+    image: ${REGISTRY_URL}/rmf-deployment/rmf-fleet-adapter
     build:
       context: .
       dockerfile: rmf/rmf-fleet-adapter.Dockerfile
@@ -241,7 +239,7 @@ services:
       - RMF_FLEET_ADAPTER_SERVER_URI=${TINYROBOTD_RMF_FLEET_ADAPTER_SERVER_URI}
 
   rmf-fleet-adapter-tinyE:
-    image: ${REGISTRY_URL}/rmf_deployment_template/rmf-fleet-adapter
+    image: ${REGISTRY_URL}/rmf-deployment/rmf-fleet-adapter
     build:
       context: .
       dockerfile: rmf/rmf-fleet-adapter.Dockerfile
@@ -287,7 +285,7 @@ services:
       - RMF_FLEET_ADAPTER_SERVER_URI=${TINYROBOTE_RMF_FLEET_ADAPTER_SERVER_URI}
 
   rmf-fleet-adapter-tinyF:
-    image: ${REGISTRY_URL}/rmf_deployment_template/rmf-fleet-adapter
+    image: ${REGISTRY_URL}/rmf-deployment/rmf-fleet-adapter
     build:
       context: .
       dockerfile: rmf/rmf-fleet-adapter.Dockerfile
@@ -333,7 +331,7 @@ services:
       - RMF_FLEET_ADAPTER_SERVER_URI=${TINYROBOTF_RMF_FLEET_ADAPTER_SERVER_URI}
 
   rmf-fleet-adapter-tinyF:
-    image: ${REGISTRY_URL}/rmf_deployment_template/rmf-fleet-adapter
+    image: ${REGISTRY_URL}/rmf-deployment/rmf-fleet-adapter
     build:
       context: .
       dockerfile: rmf/rmf-fleet-adapter.Dockerfile
@@ -379,7 +377,7 @@ services:
       - RMF_FLEET_ADAPTER_SERVER_URI=${TINYROBOTG_RMF_FLEET_ADAPTER_SERVER_URI}
 
   rmf-fleet-adapter-tinyH:
-    image: ${REGISTRY_URL}/rmf_deployment_template/rmf-fleet-adapter
+    image: ${REGISTRY_URL}/rmf-deployment/rmf-fleet-adapter
     build:
       context: .
       dockerfile: rmf/rmf-fleet-adapter.Dockerfile
@@ -424,7 +422,7 @@ services:
       - RMF_FLEET_ADAPTER_RECHARGE_THRESHOLD=${TINYROBOTH_RMF_FLEET_ADAPTER_RECHARGE_THRESHOLD}
       - RMF_FLEET_ADAPTER_SERVER_URI=${TINYROBOTH_RMF_FLEET_ADAPTER_SERVER_URI}
   rmf-fleet-adapter-tinyI:
-    image: ${REGISTRY_URL}/rmf_deployment_template/rmf-fleet-adapter
+    image: ${REGISTRY_URL}/rmf-deployment/rmf-fleet-adapter
     build:
       context: .
       dockerfile: rmf/rmf-fleet-adapter.Dockerfile
@@ -469,7 +467,7 @@ services:
       - RMF_FLEET_ADAPTER_RECHARGE_THRESHOLD=${TINYROBOTI_RMF_FLEET_ADAPTER_RECHARGE_THRESHOLD}
       - RMF_FLEET_ADAPTER_SERVER_URI=${TINYROBOTI_RMF_FLEET_ADAPTER_SERVER_URI}
   rmf-fleet-adapter-tinyJ:
-    image: ${REGISTRY_URL}/rmf_deployment_template/rmf-fleet-adapter
+    image: ${REGISTRY_URL}/rmf-deployment/rmf-fleet-adapter
     build:
       context: .
       dockerfile: rmf/rmf-fleet-adapter.Dockerfile
@@ -515,7 +513,7 @@ services:
       - RMF_FLEET_ADAPTER_SERVER_URI=${TINYROBOTJ_RMF_FLEET_ADAPTER_SERVER_URI}
 
   rmf-lift-supervisor:
-    image: ${REGISTRY_URL}/rmf_deployment_template/rmf-lift-supervisor
+    image: ${REGISTRY_URL}/rmf-deployment/rmf-lift-supervisor
     build:
       context: .
       dockerfile: rmf/rmf-lift-supervisor.Dockerfile
@@ -526,9 +524,7 @@ services:
       - type: bind
         source: ${NAV_GRAPH_FILES}
         target: ${NAV_GRAPH_FILES_MOUNTPATH}
-      - type: bind
-        source: ${FLEET_LAUNCH_FILE}
-        target: ${FLEET_LAUNCH_FILE_MOUNTPATH}
+
     network_mode: host
     environment:
       - BUILDING_CONFIG_FILE_MOUNTPATH=${BUILDING_CONFIG_FILE_MOUNTPATH}
@@ -538,7 +534,7 @@ services:
       - RMF_USE_SIM_TIME=${RMF_USE_SIM_TIME}
 
   rmf-task-dispatcher:
-    image: ${REGISTRY_URL}/rmf_deployment_template/rmf-task-dispatcher
+    image: ${REGISTRY_URL}/rmf-deployment/rmf-task-dispatcher
     build:
       context: .
       dockerfile: rmf/rmf-task-dispatcher.Dockerfile
@@ -558,9 +554,7 @@ services:
       - type: bind
         source: ${NAV_GRAPH_FILES}
         target: ${NAV_GRAPH_FILES_MOUNTPATH}
-      - type: bind
-        source: ${FLEET_LAUNCH_FILE}
-        target: ${FLEET_LAUNCH_FILE_MOUNTPATH}
+
     network_mode: host
     environment:
       - BUILDING_CONFIG_FILE_MOUNTPATH=${BUILDING_CONFIG_FILE_MOUNTPATH}
@@ -571,7 +565,7 @@ services:
       - RMF_BIDDING_TIME_WINDOW=${RMF_BIDDING_TIME_WINDOW}
 
   rmf-traffic-blockade:
-    image: ${REGISTRY_URL}/rmf_deployment_template/rmf-traffic-blockade
+    image: ${REGISTRY_URL}/rmf-deployment/rmf-traffic-blockade
     build:
       context: .
       dockerfile: rmf/rmf-traffic-blockade.Dockerfile
@@ -591,9 +585,7 @@ services:
       - type: bind
         source: ${NAV_GRAPH_FILES}
         target: ${NAV_GRAPH_FILES_MOUNTPATH}
-      - type: bind
-        source: ${FLEET_LAUNCH_FILE}
-        target: ${FLEET_LAUNCH_FILE_MOUNTPATH}
+
     network_mode: host
     environment:
       - BUILDING_CONFIG_FILE_MOUNTPATH=${BUILDING_CONFIG_FILE_MOUNTPATH}
@@ -603,7 +595,7 @@ services:
       - RMF_USE_SIM_TIME=${RMF_USE_SIM_TIME}
     
   rmf-traffic-schedule-monitor:
-    image: ${REGISTRY_URL}/rmf_deployment_template/rmf-traffic-schedule-monitor
+    image: ${REGISTRY_URL}/rmf-deployment/rmf-traffic-schedule-monitor
     build:
       context: .
       dockerfile: rmf/rmf-traffic-schedule-monitor.Dockerfile
@@ -623,9 +615,7 @@ services:
       - type: bind
         source: ${NAV_GRAPH_FILES}
         target: ${NAV_GRAPH_FILES_MOUNTPATH}
-      - type: bind
-        source: ${FLEET_LAUNCH_FILE}
-        target: ${FLEET_LAUNCH_FILE_MOUNTPATH}
+
     network_mode: host
     environment:
       - BUILDING_CONFIG_FILE_MOUNTPATH=${BUILDING_CONFIG_FILE_MOUNTPATH}
@@ -635,7 +625,7 @@ services:
       - RMF_USE_SIM_TIME=${RMF_USE_SIM_TIME}
 
   rmf-traffic-schedule:
-    image: ${REGISTRY_URL}/rmf_deployment_template/rmf-traffic-schedule
+    image: ${REGISTRY_URL}/rmf-deployment/rmf-traffic-schedule
     build:
       context: .
       dockerfile: rmf/rmf-traffic-schedule.Dockerfile
@@ -655,9 +645,7 @@ services:
       - type: bind
         source: ${NAV_GRAPH_FILES}
         target: ${NAV_GRAPH_FILES_MOUNTPATH}
-      - type: bind
-        source: ${FLEET_LAUNCH_FILE}
-        target: ${FLEET_LAUNCH_FILE_MOUNTPATH}
+
     network_mode: host
     environment:
       - BUILDING_CONFIG_FILE_MOUNTPATH=${BUILDING_CONFIG_FILE_MOUNTPATH}
@@ -667,7 +655,7 @@ services:
       - RMF_USE_SIM_TIME=${RMF_USE_SIM_TIME}
 
   rmf-trajectory-visualizer:
-    image: ${REGISTRY_URL}/rmf_deployment_template/rmf-trajectory-visualizer
+    image: ${REGISTRY_URL}/rmf-deployment/rmf-trajectory-visualizer
     build:
       context: .
       dockerfile: rmf/rmf-trajectory-visualizer.Dockerfile
@@ -687,9 +675,7 @@ services:
       - type: bind
         source: ${NAV_GRAPH_FILES}
         target: ${NAV_GRAPH_FILES_MOUNTPATH}
-      - type: bind
-        source: ${FLEET_LAUNCH_FILE}
-        target: ${FLEET_LAUNCH_FILE_MOUNTPATH}
+
     network_mode: host
     environment:
       - BUILDING_CONFIG_FILE_MOUNTPATH=${BUILDING_CONFIG_FILE_MOUNTPATH}
