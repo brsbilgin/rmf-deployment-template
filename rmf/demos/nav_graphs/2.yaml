@@ -1,0 +1,417 @@
+building_name: galen
+levels:
+  L1:
+    lanes:
+    - - 0
+      - 1
+      - {speed_limit: 0}
+    - - 1
+      - 0
+      - {speed_limit: 0}
+    - - 2
+      - 3
+      - {speed_limit: 0}
+    - - 3
+      - 2
+      - {speed_limit: 0}
+    - - 3
+      - 0
+      - {speed_limit: 0}
+    - - 0
+      - 3
+      - {speed_limit: 0}
+    - - 0
+      - 4
+      - {speed_limit: 0}
+    - - 4
+      - 0
+      - {speed_limit: 0}
+    - - 4
+      - 5
+      - {speed_limit: 0}
+    - - 5
+      - 4
+      - {speed_limit: 0}
+    - - 5
+      - 6
+      - {speed_limit: 0}
+    - - 6
+      - 5
+      - {speed_limit: 0}
+    - - 4
+      - 0
+      - {speed_limit: 0}
+    - - 0
+      - 4
+      - {speed_limit: 0}
+    - - 4
+      - 7
+      - {speed_limit: 0}
+    - - 7
+      - 4
+      - {speed_limit: 0}
+    - - 4
+      - 8
+      - {speed_limit: 0}
+    - - 8
+      - 4
+      - {speed_limit: 0}
+    - - 4
+      - 9
+      - {speed_limit: 0}
+    - - 9
+      - 4
+      - {speed_limit: 0}
+    - - 0
+      - 10
+      - {speed_limit: 0}
+    - - 10
+      - 0
+      - {speed_limit: 0}
+    - - 0
+      - 11
+      - {speed_limit: 0}
+    - - 11
+      - 0
+      - {speed_limit: 0}
+    - - 4
+      - 12
+      - {speed_limit: 0}
+    - - 12
+      - 4
+      - {speed_limit: 0}
+    - - 0
+      - 13
+      - {speed_limit: 0}
+    - - 13
+      - 0
+      - {speed_limit: 0}
+    - - 14
+      - 15
+      - {speed_limit: 0}
+    - - 15
+      - 14
+      - {speed_limit: 0}
+    - - 15
+      - 16
+      - {speed_limit: 0}
+    - - 16
+      - 15
+      - {speed_limit: 0}
+    - - 15
+      - 17
+      - {speed_limit: 0}
+    - - 17
+      - 15
+      - {speed_limit: 0}
+    - - 15
+      - 18
+      - {speed_limit: 0}
+    - - 18
+      - 15
+      - {speed_limit: 0}
+    - - 15
+      - 19
+      - {speed_limit: 0}
+    - - 19
+      - 15
+      - {speed_limit: 0}
+    - - 15
+      - 20
+      - {speed_limit: 0}
+    - - 20
+      - 15
+      - {speed_limit: 0}
+    - - 15
+      - 1
+      - {speed_limit: 0}
+    - - 1
+      - 15
+      - {speed_limit: 0}
+    - - 1
+      - 21
+      - {speed_limit: 0}
+    - - 21
+      - 1
+      - {speed_limit: 0}
+    - - 15
+      - 22
+      - {speed_limit: 0}
+    - - 22
+      - 15
+      - {speed_limit: 0}
+    vertices:
+    - - 10.623176439800817
+      - -5.558926388230256
+      - {name: ''}
+    - - 10.834264226524228
+      - -4.068736079398388
+      - {name: l1_8, spawn_robot_name: tinyRobotH1, spawn_robot_type: TinyRobot}
+    - - 7.7578348678404
+      - -5.678438705703406
+      - {lift: B, lift_cabin: B, name: ''}
+    - - 9.393448709868764
+      - -5.6299079270684755
+      - {name: ''}
+    - - 10.75104449133459
+      - -8.477440813303728
+      - {name: l1_test}
+    - - 9.25317365927528
+      - -8.574164765156997
+      - {name: ''}
+    - - 7.7578348678404
+      - -8.559141324118706
+      - {lift: A, lift_cabin: A, name: ''}
+    - - 10.79332956976259
+      - -12.450212553036176
+      - {is_charger: true, is_parking_spot: true, name: l1_1, spawn_robot_name: tinyRobotA1,
+        spawn_robot_type: TinyRobot}
+    - - 14.478461494559662
+      - -11.773651298188177
+      - {name: l1_2, spawn_robot_name: tinyRobotB1, spawn_robot_type: TinyRobot}
+    - - 14.852697098850582
+      - -8.649872779827488
+      - {name: l1_3, spawn_robot_name: tinyRobotC1, spawn_robot_type: TinyRobot}
+    - - 14.838348868645472
+      - -5.252633874028238
+      - {name: l1_6, spawn_robot_name: tinyRobotF1, spawn_robot_type: TinyRobot}
+    - - 14.95347231570294
+      - -3.6403992070987874
+      - {name: l1_7, spawn_robot_name: tinyRobotG1, spawn_robot_type: TinyRobot}
+    - - 14.737573651793113
+      - -7.066418974662406
+      - {name: l1_4, spawn_robot_name: tinyRobotD1, spawn_robot_type: TinyRobot}
+    - - 12.074457724370596
+      - -6.864952942311835
+      - {name: l1_5, spawn_robot_name: tinyRobotE1, spawn_robot_type: TinyRobot}
+    - - 7.7578348678404
+      - -2.85090894040116
+      - {lift: C, lift_cabin: C, name: ''}
+    - - 9.462067010790848
+      - -2.8801962102904137
+      - {name: ''}
+    - - 9.742532710623669
+      - -0.11368862403695787
+      - {name: l1_13}
+    - - 11.36911560775823
+      - -0.2863737946231611
+      - {name: l1_12}
+    - - 13.110906353304406
+      - -0.3871490114755202
+      - {name: l1_11}
+    - - 14.881562361969097
+      - -0.9629350494711599
+      - {name: l1_10, spawn_robot_name: tinyRobotJ1, spawn_robot_type: TinyRobot}
+    - - 9.477596859954026
+      - -4.046032115132655
+      - {name: l1_9, spawn_robot_name: tinyRobotI1, spawn_robot_type: TinyRobot}
+    - - 15.111809256084035
+      - -2.258495835638423
+      - {name: l1_15}
+    - - 7.741629807844041
+      - -0.2000312093300595
+      - {name: l1_14}
+  L5:
+    lanes:
+    - - 0
+      - 1
+      - {speed_limit: 0}
+    - - 1
+      - 0
+      - {speed_limit: 0}
+    - - 1
+      - 2
+      - {speed_limit: 0}
+    - - 2
+      - 1
+      - {speed_limit: 0}
+    - - 2
+      - 3
+      - {speed_limit: 0}
+    - - 3
+      - 2
+      - {speed_limit: 0}
+    - - 2
+      - 4
+      - {speed_limit: 0}
+    - - 4
+      - 2
+      - {speed_limit: 0}
+    - - 4
+      - 5
+      - {speed_limit: 0}
+    - - 5
+      - 4
+      - {speed_limit: 0}
+    - - 5
+      - 6
+      - {speed_limit: 0}
+    - - 6
+      - 5
+      - {speed_limit: 0}
+    - - 4
+      - 7
+      - {speed_limit: 0}
+    - - 7
+      - 4
+      - {speed_limit: 0}
+    - - 4
+      - 8
+      - {speed_limit: 0}
+    - - 8
+      - 4
+      - {speed_limit: 0}
+    - - 4
+      - 9
+      - {speed_limit: 0}
+    - - 9
+      - 4
+      - {speed_limit: 0}
+    - - 4
+      - 10
+      - {speed_limit: 0}
+    - - 10
+      - 4
+      - {speed_limit: 0}
+    - - 2
+      - 11
+      - {speed_limit: 0}
+    - - 11
+      - 2
+      - {speed_limit: 0}
+    - - 2
+      - 12
+      - {speed_limit: 0}
+    - - 12
+      - 2
+      - {speed_limit: 0}
+    - - 2
+      - 13
+      - {speed_limit: 0}
+    - - 13
+      - 2
+      - {speed_limit: 0}
+    - - 14
+      - 15
+      - {speed_limit: 0}
+    - - 15
+      - 14
+      - {speed_limit: 0}
+    - - 15
+      - 16
+      - {speed_limit: 0}
+    - - 16
+      - 15
+      - {speed_limit: 0}
+    - - 15
+      - 17
+      - {speed_limit: 0}
+    - - 17
+      - 15
+      - {speed_limit: 0}
+    - - 15
+      - 18
+      - {speed_limit: 0}
+    - - 18
+      - 15
+      - {speed_limit: 0}
+    - - 15
+      - 19
+      - {speed_limit: 0}
+    - - 19
+      - 15
+      - {speed_limit: 0}
+    - - 15
+      - 20
+      - {speed_limit: 0}
+    - - 20
+      - 15
+      - {speed_limit: 0}
+    - - 15
+      - 3
+      - {speed_limit: 0}
+    - - 3
+      - 15
+      - {speed_limit: 0}
+    - - 3
+      - 21
+      - {speed_limit: 0}
+    - - 21
+      - 3
+      - {speed_limit: 0}
+    - - 15
+      - 22
+      - {speed_limit: 0}
+    - - 22
+      - 15
+      - {speed_limit: 0}
+    vertices:
+    - - 7.919426967037175
+      - -5.608888724814661
+      - {lift: B, lift_cabin: B, name: ''}
+    - - 9.583854114670721
+      - -5.666721681447439
+      - {name: ''}
+    - - 10.779176738936108
+      - -5.772092602393738
+      - {name: m_lift}
+    - - 11.220679843123627
+      - -3.5173592897977644
+      - {name: l2_8}
+    - - 10.724306861903479
+      - -8.612881635187517
+      - {name: ''}
+    - - 9.27093773641328
+      - -8.537525519170543
+      - {name: ''}
+    - - 7.885886174730295
+      - -8.489404643662908
+      - {lift: A, lift_cabin: A, name: ''}
+    - - 9.487846787380342
+      - -11.397596533325608
+      - {name: l2_1}
+    - - 11.524643724312064
+      - -11.757846380916323
+      - {name: l2_2}
+    - - 14.15735566377331
+      - -11.289104373728076
+      - {name: l2_3}
+    - - 14.209165664064493
+      - -8.705916355095681
+      - {name: l2_4}
+    - - 14.106298099613035
+      - -6.767554194421549
+      - {name: l2_5}
+    - - 14.16664397760703
+      - -5.426469770805844
+      - {name: l2_6}
+    - - 14.214164868203277
+      - -3.906314969837264
+      - {name: l2_7}
+    - - 7.952347895984936
+      - -2.7816072751214485
+      - {lift: C, lift_cabin: C, name: ''}
+    - - 9.763443763970521
+      - -2.7839222869773215
+      - {name: ''}
+    - - 7.342669064527975
+      - 0.06492774191490458
+      - {name: l2_14}
+    - - 9.754817188526722
+      - -0.20172075577559223
+      - {name: l2_13}
+    - - 11.73619371806948
+      - -0.32916255712467724
+      - {name: l2_12}
+    - - 13.744843590412167
+      - -0.6805128688059958
+      - {name: l2_11}
+    - - 9.901032435907545
+      - -4.4206236604687605
+      - {name: l2_10}
+    - - 14.474391244152535
+      - -2.0457049174243735
+      - {name: l2_15}
+    - - 8.714698887437542
+      - -4.523072424938969
+      - {name: l2_9}
