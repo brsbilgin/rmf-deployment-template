@@ -21,3 +21,31 @@
 .idea/
 *.tmproj
 .vscode/
+
+# For testing purposes
+building-configmap.yaml
+# nav-graph-configmap.yaml
+# cyclonedds-configmap.yaml
+keycloak-secrets.yaml
+rmf-web-rmf-server-configmap.yaml
+rmf-web-rmf-server-secrets.yaml
+
+caddy.yaml
+cleanerbota.yaml
+cleanerbote.yaml
+deliveryrobot.yaml
+delta.yaml
+kabam.yaml
+omron.yaml
+# panasonic_hospi.yaml
+panasonic_wheelchair.yaml
+tinyrobot.yaml
+
+keycloak.yaml
+# rmf-core-modules.yaml
+# rmf-web-modules.yaml
+rmf-simulation-modules.yaml
+
+# floorplan-configmap.yaml
+floorplan-configmap-bkup.yaml
+*bkup.*

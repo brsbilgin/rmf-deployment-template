@@ -2,6 +2,8 @@
 
 This repo focuses on launching RMF through Dockerfiles, the version of RMF used will be the <code>main</code> branch of RMF. This repo will be using <code>ROS2 Galactic</code>.
 
+The key difference is that this repo provides a way to load the building.yaml, nav_graphs, and site pictures onto your deployments
+
 To launch RMF, please refer to the <code>docker-compose.yml</code> and the <code>.env</code> file.
 
 ### Environment Variables and Configurations
