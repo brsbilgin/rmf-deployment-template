@@ -1,0 +1,176 @@
+building_name: galen
+levels:
+  L1:
+    lanes:
+    - - 0
+      - 1
+      - {speed_limit: 0}
+    - - 1
+      - 0
+      - {speed_limit: 0}
+    - - 2
+      - 3
+      - {speed_limit: 0}
+    - - 3
+      - 2
+      - {speed_limit: 0}
+    - - 3
+      - 0
+      - {speed_limit: 0}
+    - - 0
+      - 3
+      - {speed_limit: 0}
+    - - 0
+      - 4
+      - {speed_limit: 0}
+    - - 4
+      - 0
+      - {speed_limit: 0}
+    - - 4
+      - 5
+      - {speed_limit: 0}
+    - - 5
+      - 4
+      - {speed_limit: 0}
+    - - 5
+      - 6
+      - {speed_limit: 0}
+    - - 6
+      - 5
+      - {speed_limit: 0}
+    - - 4
+      - 0
+      - {speed_limit: 0}
+    - - 0
+      - 4
+      - {speed_limit: 0}
+    vertices:
+    - - 10.623176439800817
+      - -5.558926388230256
+      - {name: ''}
+    - - 10.834264226524228
+      - -4.068736079398388
+      - {is_charger: true, name: m_end}
+    - - 7.7578348678404
+      - -5.678438705703406
+      - {lift: B, lift_cabin: B, name: ''}
+    - - 9.393448709868764
+      - -5.6299079270684755
+      - {name: ''}
+    - - 10.75104449133459
+      - -8.477440813303728
+      - {name: ''}
+    - - 9.25317365927528
+      - -8.574164765156997
+      - {name: ''}
+    - - 7.7578348678404
+      - -8.559141324118706
+      - {lift: A, lift_cabin: A, name: ''}
+  L5:
+    lanes:
+    - - 0
+      - 1
+      - {speed_limit: 0}
+    - - 1
+      - 0
+      - {speed_limit: 0}
+    - - 1
+      - 2
+      - {speed_limit: 0}
+    - - 2
+      - 1
+      - {speed_limit: 0}
+    - - 2
+      - 3
+      - {speed_limit: 0}
+    - - 3
+      - 2
+      - {speed_limit: 0}
+    - - 3
+      - 4
+      - {speed_limit: 0}
+    - - 4
+      - 3
+      - {speed_limit: 0}
+    - - 4
+      - 5
+      - {speed_limit: 0}
+    - - 5
+      - 4
+      - {speed_limit: 0}
+    - - 6
+      - 7
+      - {speed_limit: 0}
+    - - 7
+      - 6
+      - {speed_limit: 0}
+    - - 7
+      - 8
+      - {speed_limit: 0}
+    - - 8
+      - 7
+      - {speed_limit: 0}
+    - - 8
+      - 9
+      - {speed_limit: 0}
+    - - 9
+      - 8
+      - {speed_limit: 0}
+    - - 8
+      - 10
+      - {speed_limit: 0}
+    - - 10
+      - 8
+      - {speed_limit: 0}
+    - - 10
+      - 11
+      - {speed_limit: 0}
+    - - 11
+      - 10
+      - {speed_limit: 0}
+    - - 11
+      - 12
+      - {speed_limit: 0}
+    - - 12
+      - 11
+      - {speed_limit: 0}
+    vertices:
+    - - -20.58978446932528
+      - -12.159833421458341
+      - {name: w1, spawn_robot_name: missybot, spawn_robot_type: missy}
+    - - -19.773894446497643
+      - -14.5134166384147
+      - {name: ''}
+    - - -21.110001583415972
+      - -16.327393041742933
+      - {name: w2}
+    - - -18.996773618124173
+      - -23.26557139319135
+      - {is_charger: true, is_parking_spot: true, name: m_start}
+    - - -4.365804872768798
+      - -23.435934723150893
+      - {name: m_mid}
+    - - 10.428971524839149
+      - -23.60820543310668
+      - {name: m_wait}
+    - - 7.919426967037175
+      - -5.608888724814661
+      - {lift: B, lift_cabin: B, name: ''}
+    - - 9.583854114670721
+      - -5.666721681447439
+      - {name: ''}
+    - - 10.779176738936108
+      - -5.772092602393738
+      - {name: m_lift}
+    - - 11.220679843123627
+      - -3.5173592897977644
+      - {is_charger: true, is_parking_spot: true, name: n_end}
+    - - 10.724306861903479
+      - -8.612881635187517
+      - {name: ''}
+    - - 9.27093773641328
+      - -8.537525519170543
+      - {name: ''}
+    - - 7.885886174730295
+      - -8.489404643662908
+      - {lift: A, lift_cabin: A, name: ''}

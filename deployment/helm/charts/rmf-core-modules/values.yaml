@@ -9,6 +9,7 @@ global:
   DDS_CONFIG_VOLUME: cyclonedds-configmap
   DDS_ENV: CYCLONEDDS_URI
   DDS_CONFIG: /etc/cyclonedds/cyclonedds.xml
+  DDS_CONFIG_FILE: site-specific-configs/galen/cyclonedds.xml
   RMW_IMPLEMENTATION: rmw_cyclonedds_cpp
   
   BUILDING_CONFIG_VOLUME: building-configmap

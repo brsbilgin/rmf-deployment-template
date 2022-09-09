@@ -46,9 +46,6 @@ levels:
       - [1, 7, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 1], orientation: [1, ""], speed_limit: [3, 0]}]
       - [7, 11, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 1], orientation: [1, ""], speed_limit: [3, 0]}]
       - [11, 9, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 1], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [7, 13, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [13, 14, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
-      - [14, 1, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
     layers:
       lvl1_carto:
         color: [1, 0, 0, 0.5]
@@ -68,21 +65,19 @@ levels:
       - [4, 5, {distance: [3, 6.6]}]
       - [3, 6, {distance: [3, 5.4]}]
     vertices:
-      - [126.672, 128.416, 0, m_start, {is_charger: [4, true], is_parking_spot: [4, true]}]
-      - [127.38, 100.442, 0, n_try]
+      - [126.672, 128.416, 0, n_start, {is_charger: [4, true], is_parking_spot: [4, true]}]
+      - [127.38, 100.442, 0, ""]
       - [10612.988, 5955.442, 0, ""]
       - [184.989, 312.975, 0, ""]
       - [263.367, 313.465, 0, ""]
       - [341.746, 313.955, 0, ""]
       - [184.499, 249.293, 0, ""]
       - [125.865, 65.863, 0, ""]
-      - [128.366, 48.207, 0, n_start, {is_charger: [4, true]}]
+      - [128.366, 48.207, 0, m_end, {is_charger: [4, true]}]
       - [91.916, 67.279, 0, "", {lift_cabin: [1, B]}]
       - [91.916, 101.41, 0, "", {lift_cabin: [1, A]}]
       - [111.295, 66.70399999999999, 0, ""]
       - [109.633, 101.588, 0, ""]
-      - [145.779, 71.398, 0, ""]
-      - [146.405, 95.82299999999999, 0, ""]
   L5:
     drawing:
       filename: pics/lvl5_floorplan.png
@@ -115,7 +110,7 @@ levels:
       {}
     vertices:
       - [1178, 169.531, 0, ""]
-      - [1178.361, 122.46, 0, n_lift]
+      - [1178.361, 122.46, 0, m_lift]
       - [1176, 418, 0, m_wait]
       - [688.468, 418, 0, m_start, {is_charger: [4, true], is_parking_spot: [4, true]}]
       - [704.499, 190.922, 0, ""]
@@ -132,7 +127,7 @@ levels:
       - [930.877, 418, 0, m_mid]
       - [1158.539, 120.945, 0, ""]
       - [1153.909, 168.563, 0, ""]
-      - [1176.789, 204.787, 0, m_end]
+      - [1176.789, 204.787, 0, m_test]
 lifts:
   A:
     depth: 1
