@@ -8,6 +8,7 @@ ENV RMF_FREE_FLEET_SERVER_TRANSLATION_X=37.6
 ENV RMF_FREE_FLEET_SERVER_TRANSLATION_Y=4.63
 ENV RMF_FREE_FLEET_SERVER_ROTATION=-3.10
 ENV RMF_FREE_FLEET_SERVER_SCALE=0.982
+ENV node_name=ff
 
 RUN sed -i '$iros2 run free_fleet_server_ros2 free_fleet_server_ros2 --ros-args \
     -p fleet_name:=$RMF_FREE_FLEET_SERVER_FLEET_NAME \
@@ -25,7 +26,8 @@ RUN sed -i '$iros2 run free_fleet_server_ros2 free_fleet_server_ros2 --ros-args 
     -p translation_x:=$RMF_FREE_FLEET_SERVER_TRANSLATION_X \
     -p translation_y:=$RMF_FREE_FLEET_SERVER_TRANSLATION_Y \
     -p rotation:=$RMF_FREE_FLEET_SERVER_ROTATION \
-    -p scale:=$RMF_FREE_FLEET_SERVER_SCALE' /ros_entrypoint.sh
+    -p scale:=$RMF_FREE_FLEET_SERVER_SCALE \
+    -r __name:=${node_name}_ff_server' /ros_entrypoint.sh
 
 ENTRYPOINT ["/ros_entrypoint.sh"]
 CMD ["bash"]

@@ -1,0 +1,98 @@
+building_name: galen
+levels:
+  L1:
+    lanes:
+    - - 0
+      - 1
+      - {speed_limit: 0}
+    - - 1
+      - 0
+      - {speed_limit: 0}
+    - - 1
+      - 2
+      - {speed_limit: 0}
+    - - 2
+      - 1
+      - {speed_limit: 0}
+    - - 2
+      - 3
+      - {speed_limit: 0}
+    - - 3
+      - 2
+      - {speed_limit: 0}
+    vertices:
+    - - 7.258516456702581
+      - -8.559141324118706
+      - {lift: A, lift_cabin: A, name: ''}
+    - - 9.25317365927528
+      - -8.574164765156997
+      - {name: ''}
+    - - 10.75104449133459
+      - -8.477440813303728
+      - {name: n_try}
+    - - 10.69812484228398
+      - -10.282110567689944
+      - {is_charger: true, is_parking_spot: true, name: kabam_start}
+  L5:
+    lanes:
+    - - 0
+      - 1
+      - {speed_limit: 0}
+    - - 1
+      - 0
+      - {speed_limit: 0}
+    - - 2
+      - 3
+      - {speed_limit: 0}
+    - - 3
+      - 2
+      - {speed_limit: 0}
+    - - 2
+      - 4
+      - {speed_limit: 0}
+    - - 4
+      - 2
+      - {speed_limit: 0}
+    - - 4
+      - 5
+      - {speed_limit: 0}
+    - - 5
+      - 4
+      - {speed_limit: 0}
+    - - 5
+      - 6
+      - {speed_limit: 0}
+    - - 6
+      - 5
+      - {speed_limit: 0}
+    - - 6
+      - 7
+      - {speed_limit: 0}
+    - - 7
+      - 6
+      - {speed_limit: 0}
+    vertices:
+    - - -44.26451608321756
+      - -14.268812382628639
+      - {is_charger: true, is_parking_spot: true, name: kabam_1}
+    - - -41.34446663001948
+      - -14.302813504300865
+      - {name: kabam_2}
+    - - 10.428417863069221
+      - -2.7842403992881515
+      - {name: ''}
+    - - 11.682861311034763
+      - -0.7879774702408651
+      - {is_charger: true, is_parking_spot: true, name: kabam_end}
+    - - 10.37051250551341
+      - -5.631694571278769
+      - {name: n_lift}
+    - - 10.386473832270504
+      - -8.517133154069207
+      - {name: test}
+    - - 9.27093773641328
+      - -8.537525519170543
+      - {name: ''}
+    - - 7.345416542312485
+      - -8.481119367174067
+      - {lift: A, lift_cabin: A, name: ''}

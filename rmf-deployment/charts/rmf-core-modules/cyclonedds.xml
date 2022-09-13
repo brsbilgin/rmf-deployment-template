@@ -15,6 +15,14 @@
                                 <Peer address="10.0.7.4"/> 
 				<Peer address="10.0.7.5"/>
 				<Peer address="10.0.7.6"/>
+				<Peer address="10.0.7.7"/>
+				<Peer address="10.0.7.8"/>
+				<Peer address="10.0.7.9"/>
+				<Peer address="10.0.7.10"/>
+				<Peer address="10.0.7.11"/>
+				<Peer address="10.0.7.12"/>
+				<Peer address="10.0.7.13"/>
+				<Peer address="10.0.7.14"/>
                         </Peers>
                         <ParticipantIndex>auto</ParticipantIndex>
                         <MaxAutoParticipantIndex>400</MaxAutoParticipantIndex>

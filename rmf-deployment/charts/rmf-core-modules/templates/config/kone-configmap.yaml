@@ -1,0 +1,8 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kone-configmap
+data:
+  {{.Values.kone.KONE_ENV}}: |-
+{{ .Files.Get "kone-env.yaml" | indent 4}}

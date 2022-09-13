@@ -1,0 +1,169 @@
+---
+apiVersion: v1
+kind: Pod
+namespace: 
+metadata:
+ name: pana-fleet-adapter
+spec:
+ restartPolicy: Always
+ hostNetwork: true
+ containers:
+   - name: pana-fleet-adapter
+     image: {{ .Values.registryUrl }}/rmf-deployment/rmf-fleet-adapter
+     imagePullPolicy: Always
+     env:
+       - name: RMF_USE_SIM_TIME
+         value: {{ .Values.global.RMF_USE_SIM_TIME | quote }}
+       - name: {{ .Values.global.DDS_ENV | quote }}
+         value: {{ .Values.global.DDS_CONFIG | quote }}
+       - name: ROS_DOMAIN_ID
+         value: {{ .Values.global.ROS_DOMAIN_ID | quote }}
+       - name: RMW_IMPLEMENTATION
+         value: {{ .Values.global.RMW_IMPLEMENTATION | quote }}
+       - name: RMF_FLEET_ADAPTER_CONTROL_TYPE
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_CONTROL_TYPE | quote }}
+       - name: RMF_FLEET_ADAPTER_FLEET_NAME
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_FLEET_NAME | quote }}
+       - name: RMF_FLEET_ADAPTER_NAV_GRAPH_FILE
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_NAV_GRAPH_FILE | quote }}
+       - name: RMF_FLEET_ADAPTER_LINEAR_VELOCITY
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_LINEAR_VELOCITY | quote }}
+       - name: RMF_FLEET_ADAPTER_ANGULAR_VELOCITY
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_ANGULAR_VELOCITY | quote }}
+       - name: RMF_FLEET_ADAPTER_LINEAR_ACCELERATION
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_LINEAR_ACCELERATION | quote }}
+       - name: RMF_FLEET_ADAPTER_ANGULAR_ACCELERATION
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_ANGULAR_ACCELERATION | quote }}
+       - name: RMF_FLEET_ADAPTER_FOOTPRINT_RADIUS
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_FOOTPRINT_RADIUS | quote }}
+       - name: RMF_FLEET_ADAPTER_VICINITY_RADIUS
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_VICINITY_RADIUS  | quote }}
+       - name: RMF_FLEET_ADAPTER_DELAY_THRESHOLD
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_DELAY_THRESHOLD  | quote }}
+       - name: RMF_FLEET_ADAPTER_RETRY_WAIT
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_RETRY_WAIT  | quote }}
+       - name: RMF_FLEET_ADAPTER_DISCOVERY_TIMEOUT
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_DISCOVERY_TIMEOUT | quote }}
+       - name: RMF_FLEET_ADAPTER_PERFORM_DELIVERIES
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_PERFORM_DELIVERIES | quote }}
+       - name: RMF_FLEET_ADAPTER_PERFORM_LOOP
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_PERFORM_LOOP | quote }}
+       - name: RMF_FLEET_ADAPTER_PERFORM_CLEANING
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_PERFORM_CLEANING | quote }}
+       - name: RMF_FLEET_ADAPTER_BATTERY_VOLTAGE
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_BATTERY_VOLTAGE | quote  }}
+       - name: RMF_FLEET_ADAPTER_BATTERY_CAPACITY
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_BATTERY_CAPACITY | quote }}
+       - name: RMF_FLEET_ADAPTER_BATTERY_CHARGING_CURRENT
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_BATTERY_CHARGING_CURRENT | quote }}
+       - name: RMF_FLEET_ADAPTER_MASS
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_MASS | quote }}
+       - name: RMF_FLEET_ADAPTER_INERTIA
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_INERTIA | quote }}
+       - name: RMF_FLEET_ADAPTER_FRICTION_COEFFICIENT
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_FRICTION_COEFFICIENT | quote }}
+       - name: RMF_FLEET_ADAPTER_AMBIENT_POWER_DRAIN
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_AMBIENT_POWER_DRAIN  | quote }}
+       - name: RMF_FLEET_ADAPTER_TOOL_POWER_DRAIN
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_TOOL_POWER_DRAIN  | quote }}
+       - name: RMF_FLEET_ADAPTER_DRAIN_BATTERY
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_DRAIN_BATTERY | quote }}
+       - name: RMF_FLEET_ADAPTER_RECHARGE_THRESHOLD
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_RECHARGE_THRESHOLD | quote }}
+       - name: RMF_FLEET_ADAPTER_REVERSIBLE
+         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_REVERSIBLE | quote }}
+     volumeMounts:
+       - mountPath: /etc/cyclonedds
+         name: cyclonedds-configmap
+       - mountPath: /opt/rmf/install/rmf_demos_maps/share/rmf_demos_maps/maps/office/nav_graphs
+         name: nav-graph-configmap
+ volumes:
+   - name: cyclonedds-configmap
+     configMap:
+       name: cyclonedds-configmap
+   - name: nav-graph-configmap
+     configMap:
+       name: nav-graph-configmap
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+ name: pana-hospi-free-fleet-server
+spec:
+ restartPolicy: Always
+ hostNetwork: true
+ containers:
+   - name: pana-hospi-free-fleet-server
+     image: {{ .Values.registryUrl }}/rmf-deployment/rmf-free-fleet-server
+     imagePullPolicy: Always
+     env:
+       - name: {{ .Values.global.DDS_ENV | quote }}
+         value: {{ .Values.global.DDS_CONFIG | quote }}
+       - name: ROS_DOMAIN_ID
+         value: {{ .Values.global.ROS_DOMAIN_ID | quote }}
+       - name: RMW_IMPLEMENTATION
+         value: {{ .Values.global.RMW_IMPLEMENTATION | quote }}
+       - name: RMF_FREE_FLEET_SERVER_FLEET_NAME
+         value: {{ .Values.panasonic.hospi.RMF_FREE_FLEET_SERVER_FLEET_NAME | quote }}
+       - name: RMF_FREE_FLEET_SERVER_TRANSLATION_X
+         value: {{ .Values.panasonic.hospi.RMF_FREE_FLEET_SERVER_TRANSLATION_X | quote }}
+       - name: RMF_FREE_FLEET_SERVER_TRANSLATION_Y
+         value: {{ .Values.panasonic.hospi.RMF_FREE_FLEET_SERVER_TRANSLATION_Y | quote }}
+       - name: RMF_FREE_FLEET_SERVER_ROTATION
+         value: {{ .Values.panasonic.hospi.RMF_FREE_FLEET_SERVER_ROTATION | quote }}
+       - name: RMF_FREE_FLEET_SERVER_SCALE
+         value: {{ .Values.panasonic.hospi.RMF_FREE_FLEET_SERVER_SCALE | quote }}
+       - name: RMF_FREE_FLEET_SERVER_DDS_DOMAIN
+         value: {{ .Values.panasonic.hospi.RMF_FREE_FLEET_SERVER_DDS_DOMAIN | quote }}
+       - name: node_name
+         value: {{ .Values.panasonic.hospi.node_name | quote }}
+     volumeMounts:
+       - mountPath: /etc/cyclonedds
+         name: cyclonedds-configmap
+ volumes:
+   - name: cyclonedds-configmap
+     configMap:
+       name: cyclonedds-configmap
+       optional: true
+---
+apiVersion: v1
+kind: Pod
+metadata:
+ name: pana-wheelchair-free-fleet-server
+spec:
+ restartPolicy: Always
+ hostNetwork: true
+ containers:
+   - name: pana-wheelchair-free-fleet-server
+     image: {{ .Values.registryUrl }}/rmf-deployment/rmf-free-fleet-server
+     imagePullPolicy: Always
+     env:
+       - name: {{ .Values.global.DDS_ENV | quote }}
+         value: {{ .Values.global.DDS_CONFIG | quote }}
+       - name: ROS_DOMAIN_ID
+         value: {{ .Values.global.ROS_DOMAIN_ID | quote }}
+       - name: RMW_IMPLEMENTATION
+         value: {{ .Values.global.RMW_IMPLEMENTATION | quote }}
+       - name: RMF_FREE_FLEET_SERVER_FLEET_NAME
+         value: {{ .Values.panasonic.wheelchair.RMF_FREE_FLEET_SERVER_FLEET_NAME | quote }}
+       - name: RMF_FREE_FLEET_SERVER_TRANSLATION_X
+         value: {{ .Values.panasonic.wheelchair.RMF_FREE_FLEET_SERVER_TRANSLATION_X | quote }}
+       - name: RMF_FREE_FLEET_SERVER_TRANSLATION_Y
+         value: {{ .Values.panasonic.wheelchair.RMF_FREE_FLEET_SERVER_TRANSLATION_Y | quote }}
+       - name: RMF_FREE_FLEET_SERVER_ROTATION
+         value: {{ .Values.panasonic.wheelchair.RMF_FREE_FLEET_SERVER_ROTATION | quote }}
+       - name: RMF_FREE_FLEET_SERVER_SCALE
+         value: {{ .Values.panasonic.wheelchair.RMF_FREE_FLEET_SERVER_SCALE | quote }}
+       - name: RMF_FREE_FLEET_SERVER_DDS_DOMAIN
+         value: {{ .Values.panasonic.wheelchair.RMF_FREE_FLEET_SERVER_DDS_DOMAIN | quote }}
+       - name: node_name
+         value: {{ .Values.panasonic.wheelchair.node_name | quote }}
+     volumeMounts:
+       - mountPath: /etc/cyclonedds
+         name: cyclonedds-configmap
+ volumes:
+   - name: cyclonedds-configmap
+     configMap:
+       name: cyclonedds-configmap
+       optional: true

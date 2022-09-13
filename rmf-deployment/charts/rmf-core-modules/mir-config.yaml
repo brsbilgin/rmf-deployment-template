@@ -1,0 +1,202 @@
+# FLEET CONFIG =================================================================
+# RMF Fleet parameters
+
+rmf_fleet:
+  name: "DeliveryRobot"
+  fleet_manager: #not used
+    prefix: "http://127.0.0.1:8000"
+    user: "some_user"
+    password: "some_password"
+  limits:
+    linear: [0.7, 0.75] # velocity, acceleration
+    angular: [0.6, 2.0] # velocity, acceleration
+  profile: # Robot profile is modelled as a circle
+    footprint: 0.5 # radius in m
+    vicinity: 0.7 # radius in m
+  reversible: False # whether robots in this fleet can reverse
+  battery_system:
+    voltage: 24.0 # V
+    capacity: 40.0 # Ahr
+    charging_current: 8.8 # A
+  mechanical_system:
+    mass: 70.0 # kg
+    moment_of_inertia: 40.0 #kgm^2
+    friction_coefficient: 0.20
+  ambient_system:
+    power: 20.0 # W
+  tool_system:
+    power: 0.0 # W
+  recharge_threshold: 0.20 # Battery level below which robots in this fleet will not operate
+  recharge_soc: 0.99 # Battery level to which robots in this fleet should be charged up to during recharging tasks
+  publish_fleet_state: True
+  account_for_battery_drain: True
+  task_capabilities: # Specify the types of RMF Tasks that robots in this fleet are capable of performing
+    loop: True
+    delivery: False
+    clean: False
+    finishing_request: "charge" # [park, charge, nothing]
+
+# DeliveryBot CONFIG =================================================================
+
+mapping:
+  dock_name_to_dock_finishing_waypoint:
+    L1_pos_A_pick_up: L1_pos_A_entry
+    L1_pos_A_drop_off: L1_pos_A_entry
+    L2_pos_C_pick_up: L2_pos_C_entry
+    L2_pos_C_drop_off: L2_pos_C_entry
+    
+mir:
+  session: medinno
+  undocking_distance:
+    after_pick_up: -1.4
+    after_drop_off: -1.4
+  footprint:
+    normal: "MiR250 Minimum"
+    with_shelf: "Medisys Cart Base"
+  delete_rmf_missions: False
+
+
+robots:
+  # Here the user is expected to append the configuration for each robot in the
+  # fleet.
+  # Configuration for first robot in this fleet
+  DeliveryRobot_1:
+    robot_config:
+      max_delay: 10.0 # allowed seconds of delay of the current itinerary before it gets interrupted and replanned
+      api:
+        #base_url: http://192.168.2.146:8099/api/v2.0.0
+        #base_url: http://192.168.6.234/api/v2.0.0
+        base_url: https://galen-medisys.ap.ngrok.io/api/v2.0.0
+        user: admin
+        password: 8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918
+    rmf_config:
+      robot_state_update_frequency: 0.5
+      start:
+        map_name: "medinno_L1"
+        # waypoint: "charger_deliverybot1" # Optional
+        # orientation: 0.0 # Optional, radians
+        waypoint: null
+        orientation: null
+      charger:
+        waypoint: "pos_A"
+
+  # Configuration for the second robot in this fleet if there is a second robot
+  # Uncomment if more than one robot exists.
+  # DeliveryRobot_2:
+  #   robot_config:
+  #     max_delay: 10.0 # allowed seconds of delay of the current itinerary before it gets interrupted and replanned
+  #     api:
+  #       base_url: http://192.168.2.159:8081/api/v2.0.0
+  #       user: admin
+  #       password: admin
+  #   rmf_config:
+  #     robot_state_update_frequency: 0.5
+  #     start:
+  #       map_name: "L2"
+  #       # waypoint: "charger_deliverybot2" # Optional
+  #       # orientation: 0.0 # Optional, radians
+  #       waypoint: null
+  #       orientation: null
+  #     charger:
+  #       waypoint: "cleaning"
+
+
+features:
+  change_rmf_footprint_by_waypoint:
+    enabled: False
+    waypoint_matching: ['small_footprint','large_footprint']
+    footprints:
+      - name: small_footprint
+        footprint: 0.35
+        vicinity: 0.5
+      - name: large_footprint
+        footprint: 0.5
+        vicinity: 0.7
+  early_door_request_by_distance:
+    enabled: False
+    waypoint_matching: ['_door_']
+    remove: ['_in','_out']
+    before_open_distance: 5.0
+    after_close_distance: 1.0
+
+# TRANSFORM CONFIG =============================================================
+# For computing transforms between Robot and RMF coordinate systems
+
+# based on Mir250-carrier 
+reference_coordinates:
+  rmf: 
+    medinno_L1: [
+        [21.155, -14.0126], #platform_corner
+        [24.2118, -16.6153], #between coe and mtg_room_1
+        [29.02, -8.474], #between coo and cfo
+        [32.746, -8.443] #between cto and cfo
+      ]
+    medinno_L2: [
+        [21.155, -14.0126], #platform_corner
+        [24.2118, -16.6153], #between coe and mtg_room_1
+        [29.02, -8.474], #between coo and cfo
+        [32.746, -8.443] #between cto and cfo
+      ]
+  robot: 
+    medinno_L1: [
+        [17.35, 24.8],
+        [14.65, 21.80],
+        [22.75, 17.20], #between coo and cfo
+        [22.75, 13.45] #between cto and cfo
+      ]
+    medinno_L2: [
+        [17.35, 24.8],
+        [14.65, 21.80],
+        [22.75, 17.20], #between coo and cfo
+        [22.75, 13.45] #between cto and cfo
+      ]
+
+
+
+# traffic-editor: -> 
+#   platform_corner:
+#     x: 21.155
+#     y: -14.0126
+#   wall_between_mtg_room_coe:
+#     x: 24.2118
+#     y: -16.6153
+#   coo_corner:
+#     x: 25.1197
+#     y: -8.4136
+#   mtg_room_1_corner:
+#     x: 27.177
+#     y: -16.6153
+
+
+# Mir 250 and 249
+# mir_positions:
+#   platform_corner:
+#     x: 18.150
+#     y: 24.800
+#     orientation: 90.071
+#   wall_between_mtg_room_coe:
+#     x: 15.4
+#     y: 21.750
+#   coo_corner:
+#     x: 24.2
+#     y: 24.450
+#   mtg_room_1_corner:
+#     x: 15.4
+#     y: 18.850  
+
+
+# Mir250 Carrier
+# Mir 250 and 249
+# mir_positions:
+#   platform_corner:
+#     x: 17.350
+#     y: 24.750
+#   wall_between_mtg_room_coe:
+#     x: 14.6
+#     y: 21.70
+#   coo_corner:
+#     x: 23.4
+#     y: 24.40
+#   mtg_room_1_corner:
+#     x: 14.6
+#     y: 18.80  

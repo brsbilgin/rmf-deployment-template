@@ -1,0 +1,8 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mir-configmap
+data:
+  config.yaml: |-
+{{ .Files.Get "mir-config.yaml" | indent 4}}

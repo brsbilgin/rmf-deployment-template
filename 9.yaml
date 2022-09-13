@@ -1,0 +1,53 @@
+building_name: medinno
+levels:
+  medinno_L1:
+    lanes:
+    - - 0
+      - 1
+      - {speed_limit: 0}
+    - - 1
+      - 0
+      - {speed_limit: 0}
+    - - 1
+      - 2
+      - {speed_limit: 0}
+    - - 2
+      - 1
+      - {speed_limit: 0}
+    - - 2
+      - 3
+      - {speed_limit: 0}
+    - - 3
+      - 2
+      - {speed_limit: 0}
+    - - 3
+      - 4
+      - {speed_limit: 0}
+    - - 4
+      - 3
+      - {speed_limit: 0}
+    - - 5
+      - 1
+      - {speed_limit: 0}
+    - - 1
+      - 5
+      - {speed_limit: 0}
+    vertices:
+    - - 22.856488564648636
+      - -13.504949529880516
+      - {is_parking_spot: true, name: pos_C}
+    - - 23.025100139245087
+      - -14.46214493563044
+      - {name: ''}
+    - - 24.227625992985953
+      - -13.895129338121434
+      - {name: ''}
+    - - 24.208476622292945
+      - -15.579333181782173
+      - {is_parking_spot: true, name: pos_B}
+    - - 25.509905485682808
+      - -15.541064788051772
+      - {is_parking_spot: true, name: pos_A}
+    - - 22.121104173788105
+      - -14.484541505474244
+      - {is_charger: true, is_parking_spot: true, name: Charger}

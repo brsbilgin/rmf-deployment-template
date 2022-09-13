@@ -1,0 +1,239 @@
+building_name: galen
+levels:
+  L1:
+    lanes:
+    - - 0
+      - 1
+      - {speed_limit: 0}
+    - - 1
+      - 0
+      - {speed_limit: 0}
+    - - 2
+      - 0
+      - {speed_limit: 0}
+    - - 0
+      - 2
+      - {speed_limit: 0}
+    - - 0
+      - 3
+      - {speed_limit: 0}
+    - - 3
+      - 0
+      - {speed_limit: 0}
+    - - 3
+      - 4
+      - {speed_limit: 0}
+    - - 4
+      - 3
+      - {speed_limit: 0}
+    - - 3
+      - 0
+      - {speed_limit: 0}
+    - - 0
+      - 3
+      - {speed_limit: 0}
+    - - 0
+      - 5
+      - {speed_limit: 0}
+    - - 5
+      - 0
+      - {speed_limit: 0}
+    - - 5
+      - 6
+      - {speed_limit: 0}
+    - - 6
+      - 5
+      - {speed_limit: 0}
+    - - 6
+      - 3
+      - {speed_limit: 0}
+    - - 3
+      - 6
+      - {speed_limit: 0}
+    - - 2
+      - 7
+      - {speed_limit: 0}
+    - - 7
+      - 2
+      - {speed_limit: 0}
+    - - 8
+      - 4
+      - {speed_limit: 0}
+    - - 4
+      - 8
+      - {speed_limit: 0}
+    vertices:
+    - - 10.623176439800817
+      - -5.558926388230256
+      - {name: ''}
+    - - 10.834264226524228
+      - -4.068736079398388
+      - {is_charger: true, name: n_start}
+    - - 9.393448709868764
+      - -5.6299079270684755
+      - {name: ''}
+    - - 10.75104449133459
+      - -8.477440813303728
+      - {name: n_try}
+    - - 9.25317365927528
+      - -8.574164765156997
+      - {name: ''}
+    - - 12.106361436238426
+      - -5.569223353436277
+      - {name: ''}
+    - - 12.032088244588447
+      - -7.722133095035921
+      - {name: m_wait}
+    - - 7.258516456702581
+      - -5.678438705703406
+      - {lift: B, lift_cabin: B, name: ''}
+    - - 7.258516456702581
+      - -8.559141324118706
+      - {lift: A, lift_cabin: A, name: ''}
+  L5:
+    lanes:
+    - - 0
+      - 1
+      - {speed_limit: 0}
+    - - 1
+      - 0
+      - {speed_limit: 0}
+    - - 1
+      - 2
+      - {speed_limit: 0}
+    - - 2
+      - 1
+      - {speed_limit: 0}
+    - - 3
+      - 4
+      - {speed_limit: 0}
+    - - 4
+      - 3
+      - {speed_limit: 0}
+    - - 4
+      - 5
+      - {speed_limit: 0}
+    - - 5
+      - 4
+      - {speed_limit: 0}
+    - - 5
+      - 6
+      - {speed_limit: 0}
+    - - 6
+      - 5
+      - {speed_limit: 0}
+    - - 6
+      - 7
+      - {speed_limit: 0}
+    - - 7
+      - 6
+      - {speed_limit: 0}
+    - - 7
+      - 8
+      - {speed_limit: 0}
+    - - 8
+      - 7
+      - {speed_limit: 0}
+    - - 9
+      - 10
+      - {speed_limit: 0.3}
+    - - 10
+      - 9
+      - {speed_limit: 0.3}
+    - - 10
+      - 11
+      - {speed_limit: 0}
+    - - 11
+      - 10
+      - {speed_limit: 0}
+    - - 10
+      - 12
+      - {speed_limit: 0.3}
+    - - 12
+      - 10
+      - {speed_limit: 0.3}
+    - - 13
+      - 14
+      - {speed_limit: 0}
+    - - 14
+      - 13
+      - {speed_limit: 0}
+    - - 15
+      - 11
+      - {speed_limit: 0.3}
+    - - 11
+      - 15
+      - {speed_limit: 0.3}
+    - - 5
+      - 16
+      - {speed_limit: 0}
+    - - 16
+      - 5
+      - {speed_limit: 0}
+    - - 16
+      - 17
+      - {speed_limit: 0}
+    - - 17
+      - 16
+      - {speed_limit: 0}
+    - - 0
+      - 14
+      - {door_name: dormakaba_door1, speed_limit: 0}
+    - - 14
+      - 0
+      - {door_name: dormakaba_door1, speed_limit: 0}
+    vertices:
+    - - -19.001207807395033
+      - -23.314596282270784
+      - {is_charger: true, is_parking_spot: true, name: m_start}
+    - - -4.365804872768798
+      - -23.435934723150893
+      - {name: m_mid}
+    - - 10.428971524839149
+      - -23.60820543310668
+      - {name: m_wait}
+    - - 7.25843752068932
+      - -5.5825998137046104
+      - {lift: B, lift_cabin: B, name: ''}
+    - - 9.583854114670721
+      - -5.666721681447439
+      - {name: ''}
+    - - 10.37051250551341
+      - -5.631694571278769
+      - {name: n_lift}
+    - - 10.386473832270504
+      - -8.517133154069207
+      - {name: test}
+    - - 9.27093773641328
+      - -8.537525519170543
+      - {name: ''}
+    - - 7.2247034603282785
+      - -8.479713781325689
+      - {lift: A, lift_cabin: A, name: ''}
+    - - -39.240416867001876
+      - -12.60438314539055
+      - {name: w1, spawn_robot_name: missybot, spawn_robot_type: missy}
+    - - -36.953836111972905
+      - -14.686245912479627
+      - {name: ''}
+    - - -36.8850758292978
+      - -12.238894798884214
+      - {name: w3, spawn_robot_name: neuronbot2, spawn_robot_type: neuronbot}
+    - - -36.86293179355462
+      - -16.407819777231285
+      - {name: w2}
+    - - -19.773894446497643
+      - -14.5134166384147
+      - {name: ''}
+    - - -18.93856436009751
+      - -17.934716000939435
+      - {name: delta_2}
+    - - -33.89620228236757
+      - -12.355129322975152
+      - {is_charger: true, is_parking_spot: true, name: w4}
+    - - 10.428417863069221
+      - -2.7842403992881515
+      - {name: ''}
+    - - 11.969787339192429
+      - -1.2171915735215455
+      - {is_charger: true, is_parking_spot: true, name: n_end}

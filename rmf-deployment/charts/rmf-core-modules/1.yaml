@@ -1,0 +1,197 @@
+building_name: galen
+levels:
+  L1:
+    lanes:
+    - - 0
+      - 1
+      - {speed_limit: 0}
+    - - 1
+      - 0
+      - {speed_limit: 0}
+    - - 2
+      - 1
+      - {speed_limit: 0}
+    - - 1
+      - 2
+      - {speed_limit: 0}
+    - - 3
+      - 0
+      - {speed_limit: 0}
+    - - 0
+      - 3
+      - {speed_limit: 0}
+    vertices:
+    - - 10.623176439800817
+      - -5.558926388230256
+      - {name: ''}
+    - - 9.393448709868764
+      - -5.6299079270684755
+      - {name: ''}
+    - - 7.258516456702581
+      - -5.678438705703406
+      - {lift: B, lift_cabin: B, name: ''}
+    - - 12.032088244588447
+      - -7.722133095035921
+      - {name: m_wait}
+  L5:
+    lanes:
+    - - 0
+      - 1
+      - {speed_limit: 0}
+    - - 1
+      - 0
+      - {speed_limit: 0}
+    - - 2
+      - 3
+      - {speed_limit: 0}
+    - - 3
+      - 2
+      - {speed_limit: 0}
+    - - 3
+      - 4
+      - {speed_limit: 0}
+    - - 4
+      - 3
+      - {speed_limit: 0}
+    - - 4
+      - 0
+      - {speed_limit: 0}
+    - - 0
+      - 4
+      - {speed_limit: 0}
+    - - 5
+      - 6
+      - {speed_limit: 0.3}
+    - - 6
+      - 5
+      - {speed_limit: 0.3}
+    - - 6
+      - 7
+      - {speed_limit: 0}
+    - - 7
+      - 6
+      - {speed_limit: 0}
+    - - 7
+      - 8
+      - {speed_limit: 0.3}
+    - - 8
+      - 7
+      - {speed_limit: 0.3}
+    - - 7
+      - 9
+      - {speed_limit: 0.3}
+    - - 9
+      - 7
+      - {speed_limit: 0.3}
+    - - 4
+      - 10
+      - {speed_limit: 0}
+    - - 10
+      - 4
+      - {speed_limit: 0}
+    - - 10
+      - 11
+      - {speed_limit: 0}
+    - - 11
+      - 10
+      - {speed_limit: 0}
+    - - 12
+      - 13
+      - {speed_limit: 0}
+    - - 13
+      - 12
+      - {speed_limit: 0}
+    - - 13
+      - 14
+      - {door_name: dormakaba_door1, speed_limit: 0}
+    - - 14
+      - 13
+      - {door_name: dormakaba_door1, speed_limit: 0}
+    - - 14
+      - 15
+      - {speed_limit: 0}
+    - - 15
+      - 14
+      - {speed_limit: 0}
+    - - 14
+      - 16
+      - {speed_limit: 0}
+    - - 16
+      - 14
+      - {speed_limit: 0}
+    - - 15
+      - 17
+      - {speed_limit: 0}
+    - - 17
+      - 15
+      - {speed_limit: 0}
+    - - 17
+      - 18
+      - {speed_limit: 0}
+    - - 18
+      - 17
+      - {speed_limit: 0}
+    - - 18
+      - 1
+      - {speed_limit: 0}
+    - - 1
+      - 18
+      - {speed_limit: 0}
+    vertices:
+    - - 10.386473832270504
+      - -8.517133154069207
+      - {name: test}
+    - - 10.386278595990753
+      - -10.65941458243697
+      - {name: ''}
+    - - 7.379150602673526
+      - -5.584005399552985
+      - {lift: B, lift_cabin: B, name: ''}
+    - - 9.583854114670721
+      - -5.666721681447439
+      - {name: ''}
+    - - 10.37051250551341
+      - -5.631694571278769
+      - {name: n_lift}
+    - - -33.89620228236757
+      - -12.355129322975152
+      - {is_charger: true, is_parking_spot: true, name: w4}
+    - - -36.8850758292978
+      - -12.238894798884214
+      - {name: w3, spawn_robot_name: neuronbot2, spawn_robot_type: neuronbot}
+    - - -36.953836111972905
+      - -14.686245912479627
+      - {name: ''}
+    - - -39.240416867001876
+      - -12.60438314539055
+      - {name: w1, spawn_robot_name: missybot, spawn_robot_type: missy}
+    - - -36.86293179355462
+      - -16.407819777231285
+      - {name: w2}
+    - - 10.428417863069221
+      - -2.7842403992881515
+      - {name: ''}
+    - - 10.366017492401191
+      - -0.4395515622793389
+      - {name: m_end}
+    - - -19.773894446497643
+      - -14.5134166384147
+      - {name: pana_door_test}
+    - - -19.218806272361157
+      - -17.942378872897848
+      - {name: delta_2}
+    - - -19.001207807395033
+      - -23.314596282270784
+      - {is_charger: true, is_parking_spot: true, name: door_test}
+    - - -17.790450926494387
+      - -23.34384590849779
+      - {name: pana_door_test_end}
+    - - -20.240771508139588
+      - -23.322739181489478
+      - {name: ''}
+    - - -4.365804872768798
+      - -23.435934723150893
+      - {name: m_mid}
+    - - 10.428971524839149
+      - -23.60820543310668
+      - {name: corner}

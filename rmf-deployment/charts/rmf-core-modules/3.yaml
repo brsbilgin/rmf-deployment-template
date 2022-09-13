@@ -1,0 +1,134 @@
+building_name: galen
+levels:
+  L1:
+    lanes:
+    - - 0
+      - 1
+      - {speed_limit: 0}
+    - - 1
+      - 0
+      - {speed_limit: 0}
+    - - 2
+      - 3
+      - {speed_limit: 0}
+    - - 3
+      - 2
+      - {speed_limit: 0}
+    - - 1
+      - 4
+      - {speed_limit: 0}
+    - - 4
+      - 1
+      - {speed_limit: 0}
+    - - 4
+      - 2
+      - {speed_limit: 0}
+    - - 2
+      - 4
+      - {speed_limit: 0}
+    - - 4
+      - 5
+      - {speed_limit: 0}
+    - - 5
+      - 4
+      - {speed_limit: 0}
+    - - 5
+      - 6
+      - {speed_limit: 0}
+    - - 6
+      - 5
+      - {speed_limit: 0}
+    vertices:
+    - - 10.797465236115828
+      - -2.893025216120865
+      - {name: mir_1}
+    - - 10.623176439800817
+      - -5.558926388230256
+      - {name: ''}
+    - - 10.682257387704212
+      - -9.600147626176494
+      - {name: mir_2}
+    - - 10.68782787707796
+      - -14.12887108567987
+      - {is_charger: true, is_parking_spot: true, name: mir_start}
+    - - 10.75104449133459
+      - -8.477440813303728
+      - {name: n_try}
+    - - 9.25317365927528
+      - -8.574164765156997
+      - {name: ''}
+    - - 7.258516456702581
+      - -8.559141324118706
+      - {lift: A, lift_cabin: A, name: ''}
+  L5:
+    lanes:
+    - - 0
+      - 1
+      - {speed_limit: 0, undock_name: L5_01_drop_off}
+    - - 1
+      - 0
+      - {dock_name: L5_01_drop_off, speed_limit: 0}
+    - - 2
+      - 1
+      - {speed_limit: 0, undock_name: L5_01_pick_up}
+    - - 1
+      - 2
+      - {dock_name: L5_01_pick_up, speed_limit: 0}
+    - - 3
+      - 4
+      - {speed_limit: 0}
+    - - 4
+      - 3
+      - {speed_limit: 0}
+    - - 4
+      - 5
+      - {speed_limit: 0}
+    - - 5
+      - 4
+      - {speed_limit: 0}
+    - - 6
+      - 7
+      - {speed_limit: 0}
+    - - 7
+      - 6
+      - {speed_limit: 0}
+    - - 7
+      - 8
+      - {speed_limit: 0}
+    - - 8
+      - 7
+      - {speed_limit: 0}
+    - - 8
+      - 3
+      - {speed_limit: 0}
+    - - 3
+      - 8
+      - {speed_limit: 0}
+    vertices:
+    - - -38.174124560574256
+      - -19.239292253708317
+      - {dock_name: L5_01_drop_off, name: L5_01_drop_off}
+    - - -38.12245541666024
+      - -17.819089373859
+      - {name: L5_01_entry}
+    - - -38.174124560574256
+      - -19.239292253708317
+      - {dock_name: L5_01_pick_up, name: L5_01_pick_up}
+    - - 10.37051250551341
+      - -5.631694571278769
+      - {name: n_lift}
+    - - 10.428417863069221
+      - -2.7842403992881515
+      - {name: ''}
+    - - 13.026652860049545
+      - -0.7920949469896508
+      - {name: mir_end}
+    - - 7.345416542312485
+      - -8.481119367174067
+      - {lift: A, lift_cabin: A, name: ''}
+    - - 9.27093773641328
+      - -8.537525519170543
+      - {name: ''}
+    - - 10.386473832270504
+      - -8.517133154069207
+      - {name: test}

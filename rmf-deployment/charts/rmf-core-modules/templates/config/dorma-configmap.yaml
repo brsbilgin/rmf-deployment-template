@@ -1,0 +1,8 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dorma-configmap
+data:
+  {{.Values.dorma.DORMA_ENV}}: |-
+{{ .Files.Get "dorma-config.yaml" | indent 4}} # TODO Standardise naming convention for config yaml
