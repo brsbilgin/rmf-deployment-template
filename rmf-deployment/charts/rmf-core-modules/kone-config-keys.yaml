@@ -1,0 +1,15 @@
+access_id: somekey  #160fd5a3-2010-4348-8aec-644bb100bb93 
+access_secret: somekey #592a91ee0c89005933d6cef74ff0bb66cd9953d5f19c4e57d4ea6b6e7810c4c3 
+buildingId: somekey #building:HxKjGc3knnh # 
+connectionURL: somekey
+baseURL: https://dev.kone.com
+auth_server_url: https://dev.kone.com/api/v2/oauth2/token
+requestHeaders:
+  Content-Type: application/x-www-form-urlencoded
+token_req_payload:
+  grant_type: client_credentials
+  scope: robotcall/group:PZFtaS27eW:1 #robotcall/* 
+ws_url: wss://dev.kone.com/stream-v2?accessToken=
+lift_group_to_control: 0 # select which liftgroup to control 
+liftdoor_holding_duration_hard: 2 # 5  # Seconds, keeps doors always open for full duration
+liftdoor_holding_duration_soft: 15 # 30  # Seconds, ends automatically by door sensor if anyone passes through06:16:36 jh@jh-P95-96-97Ex-Rx config ±|main|→ 

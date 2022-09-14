@@ -66,9 +66,9 @@ robots:
       api:
         #base_url: http://192.168.2.146:8099/api/v2.0.0
         #base_url: http://192.168.6.234/api/v2.0.0
-        base_url: https://galen-medisys.ap.ngrok.io/api/v2.0.0
+        base_url: somekey
         user: admin
-        password: 8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918
+        password: somekey
     rmf_config:
       robot_state_update_frequency: 0.5
       start:
