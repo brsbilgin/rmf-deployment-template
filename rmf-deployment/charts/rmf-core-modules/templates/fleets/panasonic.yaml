@@ -25,7 +25,7 @@ spec:
        - name: RMF_FLEET_ADAPTER_FLEET_NAME
          value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_FLEET_NAME | quote }}
        - name: RMF_FLEET_ADAPTER_NAV_GRAPH_FILE
-         value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_NAV_GRAPH_FILE | quote }}
+         value: {{ .Values.global.NAV_GRAPH_MOUNT_PATH }}/{{ .Values.panasonic.RMF_FLEET_ADAPTER_NAV_GRAPH_FILE}}
        - name: RMF_FLEET_ADAPTER_LINEAR_VELOCITY
          value: {{ .Values.panasonic.RMF_FLEET_ADAPTER_LINEAR_VELOCITY | quote }}
        - name: RMF_FLEET_ADAPTER_ANGULAR_VELOCITY

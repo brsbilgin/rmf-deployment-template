@@ -1,44 +1,12 @@
 ---
 apiVersion: v1
 binaryData:
-  lvl1_floorplan.png: {{ .Files.Get "lvl1_floorplan.png" | b64enc }}
+  lvl1_floorplan.png: {{ .Files.Get "site-specific/building_yamls/pics/lvl1_floorplan.png" | b64enc }}
+  lvl5_floorplan.png: {{ .Files.Get "site-specific/building_yamls/pics/lvl5_floorplan.png" | b64enc }}
+  office_edited.png: {{ .Files.Get "site-specific/building_yamls/pics/office_edited.png" | b64enc }}
+  
 kind: ConfigMap
 metadata:
   creationTimestamp: "2022-08-31T07:55:05Z"
-  name: lvl1-floorplan-configmap
+  name: floorplan-configmap
   namespace: default
-  resourceVersion: "229304"
-  uid: aa48f9f6-fa2b-4742-8612-fedf4104c431
----
-apiVersion: v1
-binaryData:
-  lvl5_floorplan.png: {{ .Files.Get "lvl5_floorplan.png" | b64enc }}
-kind: ConfigMap
-metadata:
-  creationTimestamp: "2022-08-31T08:01:38Z"
-  name: lvl5-floorplan-configmap
-  namespace: default
-  resourceVersion: "230361"
-  uid: eb8bc68b-01fd-4025-8699-065c4fe57d3e
----
-apiVersion: v1
-binaryData:
-  medinno_L1_floor_plan.png: {{ .Files.Get "medinno_L1_floor_plan.png" | b64enc }}
-kind: ConfigMap
-metadata:
-  creationTimestamp: "2022-08-31T08:01:38Z"
-  name: medinno-l1-configmap
-  namespace: default
-  resourceVersion: "230361"
-  uid: eb8bc68b-01fd-4025-8699-065c4fe57d3e
----
-apiVersion: v1
-binaryData:
-  MIR_medinno_L1.png: {{ .Files.Get "MIR_medinno_L1.png" | b64enc }}
-kind: ConfigMap
-metadata:
-  creationTimestamp: "2022-08-31T08:01:38Z"
-  name: mir-medinno-l1-configmap
-  namespace: default
-  resourceVersion: "230361"
-  uid: eb8bc68b-01fd-4025-8699-065c4fe57d3e

@@ -3,12 +3,12 @@
 # kind: Pod
 # namespace: 
 # metadata:
-#  name: pana-hospi-fleet-adapter
+#  name: omron-hospi-fleet-adapter
 # spec:
 #  restartPolicy: Always
 #  hostNetwork: true
 #  containers:
-#    - name: pana-hospi-fleet-adapter
+#    - name: omron-hospi-fleet-adapter
 #      image: {{ .Values.registryUrl }}/rmf-deployment/rmf-fleet-adapter
 #      imagePullPolicy: Always
 #      env:
@@ -21,55 +21,55 @@
 #        - name: RMW_IMPLEMENTATION
 #          value: {{ .Values.global.RMW_IMPLEMENTATION | quote }}
 #        - name: RMF_FLEET_ADAPTER_CONTROL_TYPE
-#          value: {{ .Values.panasonic.hospi.RMF_FLEET_ADAPTER_CONTROL_TYPE | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FLEET_ADAPTER_CONTROL_TYPE | quote }}
 #        - name: RMF_FLEET_ADAPTER_FLEET_NAME
-#          value: {{ .Values.panasonic.hospi.RMF_FLEET_ADAPTER_FLEET_NAME | quote }}
-#        - name: RMF_FLEET_ADAPTER_NAV_GRAPH_FILE
-#          value: {{ .Values.panasonic.hospi.RMF_FLEET_ADAPTER_NAV_GRAPH_FILE | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FLEET_ADAPTER_FLEET_NAME | quote }}
+      #  - name: RMF_FLEET_ADAPTER_NAV_GRAPH_FILE
+        #  value: {{ .Values.global.NAV_GRAPH_MOUNT_PATH }}/{{ .Values.omron.RMF_FLEET_ADAPTER_NAV_GRAPH_FILE}}
 #        - name: RMF_FLEET_ADAPTER_LINEAR_VELOCITY
-#          value: {{ .Values.panasonic.hospi.RMF_FLEET_ADAPTER_LINEAR_VELOCITY | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FLEET_ADAPTER_LINEAR_VELOCITY | quote }}
 #        - name: RMF_FLEET_ADAPTER_ANGULAR_VELOCITY
-#          value: {{ .Values.panasonic.hospi.RMF_FLEET_ADAPTER_ANGULAR_VELOCITY | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FLEET_ADAPTER_ANGULAR_VELOCITY | quote }}
 #        - name: RMF_FLEET_ADAPTER_LINEAR_ACCELERATION
-#          value: {{ .Values.panasonic.hospi.RMF_FLEET_ADAPTER_LINEAR_ACCELERATION | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FLEET_ADAPTER_LINEAR_ACCELERATION | quote }}
 #        - name: RMF_FLEET_ADAPTER_ANGULAR_ACCELERATION
-#          value: {{ .Values.panasonic.hospi.RMF_FLEET_ADAPTER_ANGULAR_ACCELERATION | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FLEET_ADAPTER_ANGULAR_ACCELERATION | quote }}
 #        - name: RMF_FLEET_ADAPTER_FOOTPRINT_RADIUS
-#          value: {{ .Values.panasonic.hospi.RMF_FLEET_ADAPTER_FOOTPRINT_RADIUS | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FLEET_ADAPTER_FOOTPRINT_RADIUS | quote }}
 #        - name: RMF_FLEET_ADAPTER_VICINITY_RADIUS
-#          value: {{ .Values.panasonic.hospi.RMF_FLEET_ADAPTER_VICINITY_RADIUS | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FLEET_ADAPTER_VICINITY_RADIUS | quote }}
 #        - name: RMF_FLEET_ADAPTER_DELAY_THRESHOLD
-#          value: {{ .Values.panasonic.hospi.RMF_FLEET_ADAPTER_DELAY_THRESHOLD | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FLEET_ADAPTER_DELAY_THRESHOLD | quote }}
 #        - name: RMF_FLEET_ADAPTER_RETRY_WAIT
-#          value: {{ .Values.panasonic.hospi.RMF_FLEET_ADAPTER_RETRY_WAIT | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FLEET_ADAPTER_RETRY_WAIT | quote }}
 #        - name: RMF_FLEET_ADAPTER_DISCOVERY_TIMEOUT
-#          value: {{ .Values.panasonic.hospi.RMF_FLEET_ADAPTER_DISCOVERY_TIMEOUT | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FLEET_ADAPTER_DISCOVERY_TIMEOUT | quote }}
 #        - name: RMF_FLEET_ADAPTER_PERFORM_DELIVERIES
-#          value: {{ .Values.panasonic.hospi.RMF_FLEET_ADAPTER_PERFORM_DELIVERIES | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FLEET_ADAPTER_PERFORM_DELIVERIES | quote }}
 #        - name: RMF_FLEET_ADAPTER_PERFORM_LOOP
-#          value: {{ .Values.panasonic.hospi.RMF_FLEET_ADAPTER_PERFORM_LOOP | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FLEET_ADAPTER_PERFORM_LOOP | quote }}
 #        - name: RMF_FLEET_ADAPTER_PERFORM_CLEANING
-#          value: {{ .Values.panasonic.hospi.RMF_FLEET_ADAPTER_PERFORM_CLEANING | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FLEET_ADAPTER_PERFORM_CLEANING | quote }}
 #        - name: RMF_FLEET_ADAPTER_BATTERY_VOLTAGE
-#          value: {{ .Values.panasonic.hospi.RMF_FLEET_ADAPTER_BATTERY_VOLTAGE | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FLEET_ADAPTER_BATTERY_VOLTAGE | quote }}
 #        - name: RMF_FLEET_ADAPTER_BATTERY_CAPACITY
-#          value: {{ .Values.panasonic.hospi.RMF_FLEET_ADAPTER_BATTERY_CAPACITY | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FLEET_ADAPTER_BATTERY_CAPACITY | quote }}
 #        - name: RMF_FLEET_ADAPTER_BATTERY_CHARGING_CURRENT
-#          value: {{ .Values.panasonic.hospi.RMF_FLEET_ADAPTER_BATTERY_CHARGING_CURRENT | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FLEET_ADAPTER_BATTERY_CHARGING_CURRENT | quote }}
 #        - name: RMF_FLEET_ADAPTER_MASS
-#          value: {{ .Values.panasonic.hospi.RMF_FLEET_ADAPTER_MASS | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FLEET_ADAPTER_MASS | quote }}
 #        - name: RMF_FLEET_ADAPTER_INERTIA
-#          value: {{ .Values.panasonic.hospi.RMF_FLEET_ADAPTER_INERTIA | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FLEET_ADAPTER_INERTIA | quote }}
 #        - name: RMF_FLEET_ADAPTER_FRICTION_COEFFICIENT
-#          value: {{ .Values.panasonic.hospi.RMF_FLEET_ADAPTER_FRICTION_COEFFICIENT | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FLEET_ADAPTER_FRICTION_COEFFICIENT | quote }}
 #        - name: RMF_FLEET_ADAPTER_AMBIENT_POWER_DRAIN
-#          value: {{ .Values.panasonic.hospi.RMF_FLEET_ADAPTER_AMBIENT_POWER_DRAIN | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FLEET_ADAPTER_AMBIENT_POWER_DRAIN | quote }}
 #        - name: RMF_FLEET_ADAPTER_TOOL_POWER_DRAIN
-#          value: {{ .Values.panasonic.hospi.RMF_FLEET_ADAPTER_TOOL_POWER_DRAIN | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FLEET_ADAPTER_TOOL_POWER_DRAIN | quote }}
 #        - name: RMF_FLEET_ADAPTER_DRAIN_BATTERY
-#          value: {{ .Values.panasonic.hospi.RMF_FLEET_ADAPTER_DRAIN_BATTERY | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FLEET_ADAPTER_DRAIN_BATTERY | quote }}
 #        - name: RMF_FLEET_ADAPTER_RECHARGE_THRESHOLD
-#          value: {{ .Values.panasonic.hospi.RMF_FLEET_ADAPTER_RECHARGE_THRESHOLD | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FLEET_ADAPTER_RECHARGE_THRESHOLD | quote }}
 #      volumeMounts:
 #        - mountPath: /etc/cyclonedds
 #          name: cyclonedds-configmap
@@ -82,12 +82,12 @@
 # apiVersion: v1
 # kind: Pod
 # metadata:
-#  name: pana-hospi-free-fleet-server
+#  name: omron-hospi-free-fleet-server
 # spec:
 #  restartPolicy: Always
 #  hostNetwork: true
 #  containers:
-#    - name: pana-hospi-free-fleet-server
+#    - name: omron-hospi-free-fleet-server
 #      image: {{ .Values.registryUrl }}/rmf-deployment/rmf-free-fleet-server
 #      imagePullPolicy: Always
 #      env:
@@ -98,15 +98,15 @@
 #        - name: RMW_IMPLEMENTATION
 #          value: {{ .Values.global.RMW_IMPLEMENTATION | quote }}
 #        - name: RMF_FREE_FLEET_SERVER_FLEET_NAME
-#          value: {{ .Values.panasonic.hospi.RMF_FREE_FLEET_SERVER_FLEET_NAME | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FREE_FLEET_SERVER_FLEET_NAME | quote }}
 #        - name: RMF_FREE_FLEET_SERVER_TRANSLATION_X
-#          value: {{ .Values.panasonic.hospi.RMF_FREE_FLEET_SERVER_TRANSLATION_X | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FREE_FLEET_SERVER_TRANSLATION_X | quote }}
 #        - name: RMF_FREE_FLEET_SERVER_TRANSLATION_Y
-#          value: {{ .Values.panasonic.hospi.RMF_FREE_FLEET_SERVER_TRANSLATION_Y | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FREE_FLEET_SERVER_TRANSLATION_Y | quote }}
 #        - name: RMF_FREE_FLEET_SERVER_ROTATION
-#          value: {{ .Values.panasonic.hospi.RMF_FREE_FLEET_SERVER_ROTATION | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FREE_FLEET_SERVER_ROTATION | quote }}
 #        - name: RMF_FREE_FLEET_SERVER_SCALE
-#          value: {{ .Values.panasonic.hospi.RMF_FREE_FLEET_SERVER_SCALE | quote }}
+#          value: {{ .Values.omron.hospi.RMF_FREE_FLEET_SERVER_SCALE | quote }}
 #      volumeMounts:
 #        - mountPath: /etc/cyclonedds
 #          name: cyclonedds-configmap

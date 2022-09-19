@@ -8,15 +8,16 @@ This repo evolved from [open-rmf/rmf_deployment_template](https://github.com/ope
 
 >The term **chart** in this repo means a helm chart
 
-## File Structure
+# File Structure
+
+The site specific files and configurations such as the nav_graphs; building.yaml; and config.yamls are stored in two seperate locations. One for docker-compose deployment method and one for helm deployment method.
 
 This repo is structured as -
 - [rmf](rmf) - Contains Dockerfiles for deployment
+  - [demos](rmf/demos) - Contains the site-specific configuration files for a deployment using Docker Compose. Config files include files like nav_graphs; building.yaml; and config.yamls
+- [docker-compose.yml](docker-compose.yml) - Bringup instructions for a docker-compose bringup, uses the [env](deployment/docker-compose/env) file to store the environmental variables
 - [rmf-deployment](rmf-deployment) - Contains the helm charts and templates 
-<!-- - [deployment](deployment) - Contains the different methods of deployment. 
-  - [deployment/docker-compose](deployment/docker-compose/) - Contains the [docker-compose.yml](deployment/docker-compose/docker-compose.yml) and [env](deployment/docker-compose/env) file to co-ordiante bringup
-  - [deployment/helm](deployment/helm/) - Contains the helm chart and templates 
-- [site-specific-configs](site-specific-configs) at the root dir, and  [site-specific-configs](deployment/helm/charts/rmf-core-modules/site-specific-configs) in the Helm folder - Contains deployment specific files, i.e. For **Galen**, the [building.yaml](site-specific-configs/galen/galen.building.yaml) and [nav_graphs](site-specific-configs/galen/nav_graphs/) -->
+  - [charts/rmf-core-modules/site-specific](rmf-deployment/charts/rmf-core-modules/site-specific) - Contains the site-specific configuration files for a deployment using Helm. Config files include files like nav_graphs; building.yaml; and config.yamls
 - [rmf-simulation](rmf-simulation) - TO BE TESTED
 - [rmf-web](rmf-web) - TO BE TESTED
 
@@ -28,12 +29,12 @@ We will be using the following tools -
 - Kubernetes distribution: [k3s](https://k3s.io) 
 - CD: [ArgoCD](https://argoproj.github.io/cd)
 
-> ### Deployment methods, Docker or Kubernetes?
+> ## Deployment methods, Docker or Kubernetes?
 >This repo provides two ways of launching RMF, through docker-compose, or through kubernetes.
 The <code>Docker</code> method is arguably more straight forward, you don't have to learn Kubernetes to run it.
 However the <code>Kubernetes</code> method provides a way to revive things when they die, which they do.. frequently..
 
-## Docker deployment
+# Docker deployment
 Follow the docker enginer installation instructions here. This should be all you need.
 https://docs.docker.com/engine/install/ubuntu/
 ```
@@ -47,53 +48,54 @@ To Stop
 ```
 docker-compose down
 ```
-## Kubernetes deployment
+# Kubernetes deployment
 
 Replace the <code>--flannel-iface</code> with the network interface you are using to connect to the internet
 ```
 # Install k3s
 curl -sLS https://get.k3sup.dev | sh
 sudo install k3sup /usr/local/bin/k3sup
-k3sup install --local --user ubuntu --cluster --k3s-extra-args '--flannel-iface=wlp0s20f3 --no-deploy traefik --write-kubeconfig-mode --docker' --k3s-version v1.24.4+k3s1
+k3sup install --local --user ubuntu --cluster --k3s-extra-args '--flannel-iface=ens5 --no-deploy traefik --write-kubeconfig-mode --docker' --k3s-version v1.24.4+k3s1
 export KUBECONFIG=$PWD/kubeconfig
-helm install rmf-deployment ./deployment/helm
+helm install rmf-deployment rmf-deployment
 ```
-To Stop
+## To Stop
 ```
 helm uninstall rmf-deployment
 k3sup-killall.sh && k3sup-uninstall.sh
 ```
 > Use the .helmignore file is used to specify files you don't want to include in your helm chart deployment.
 
-Helper commands
+## Helper commands
 ```
 # Check that nodes are running
 kubectl get pods --all-namespaces
 # Check configmap is running
 kubectl get cm
+```
+## To insert in a new building.yaml or edit an existing one:
+1. Edit or replace the building.yaml in [this location](rmf-deployment/charts/rmf-core-modules/site-specific/building_yamls/) 
+2. Ensure the building.yaml is included in the configmap, see [here](rmf-deployment/charts/rmf-core-modules/templates/config/building-configmap.yaml)
+3. Kill the existing building map server and configmap which stores your building map with:
 
-kubectl describe cm lvl5-floorplan-configmap
-kubectl describe cm lvl1-floorplan-configmap
-kubectl get configmaps lvl5-floorplan-configmap -o yaml > lvl5-floorplan-configmap.yaml
+    ```kubectl kill pods rmf-building-map-server && kubectl kill cm building-configmap```
+4. Spin up everything with: 
 
-kubectl exec -it rmf-building-map-server -- /bin/bash
-```
-To pump in a new building.yaml file
-```
-kubectl create configmap building-configmap --from-file=YOURPATH/galen.building.yaml
-kubectl get configmaps building-configmap -o yaml > building-configmap.yaml
-# Place the new yaml into the configurations folder
-```
-To pump in the floorplan png files
-```
-kubectl create configmap floorplan-configmap --from-file=YOURPATH/galen.png
-kubectl get configmaps floorplan-configmap -o yaml > floorplan-configmap.yaml
-# Place the new yaml into the configurations folder
-```
+    ```helm upgrade rmf-deployment rmf-deployment```
+
+## To insert in a floorplan png file or edit an existing one:
+1. Add the png or replace it in [this location](rmf-deployment/charts/rmf-core-modules/site-specific/building_yamls/pics/) 
+2. Ensure the png is included in the floorplan-configmap, see [here](rmf-deployment/charts/rmf-core-modules/templates/config/floorplan-configmap.yaml)
+3. Kill the existing floorplan-configmap with:
+
+    ```kubectl kill cm floorplan-configmap```
+4. Spin up everything with: 
+
+    ```helm upgrade rmf-deployment rmf-deployment```
 
 ## Environment Variables and Configurations
 
-The site specific configurations are found in [site-specific-configs](site-specific-configs) and [deployment/helm/charts/rmf-core-modules/site-specific-configs](deployment/helm/charts/rmf-core-modules/site-specific-configs). The latter folder is simply a copy of the one at the base of the repo.
+The site specific configurations are found in [rmf/demos](rmf/demos) and [rmf-deployment/charts/rmf-core-modules/site-specific](rmf-deployment/charts/rmf-core-modules/site-specific). The latter folder is simply a copy of the one at the base of the repo.
 > Helm does not provide a way to pass files external to the chart during helm install. So for users to supply data, it must be loaded using helm install -f or helm install --set. TODO. Workaround for this. 
 
 The environmental variables, such as map transformations, are set in the [deployment/docker-compose/env](deployment/docker-compose/env). An example of important environmental variables include:

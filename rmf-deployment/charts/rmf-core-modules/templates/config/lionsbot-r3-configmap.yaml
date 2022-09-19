@@ -5,4 +5,4 @@ metadata:
   name: lionsbot-r3-configmap
 data:
   config.yaml: |-
-{{ .Files.Get "lionsbot-r3-config.yaml" | indent 4}}
+{{ .Files.Get "site-specific/configs/lionsbot-r3-config-keys.yaml" | indent 4}}

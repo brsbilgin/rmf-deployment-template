@@ -25,14 +25,9 @@ spec:
           name: {{ .Values.global.DDS_CONFIG_VOLUME | quote }}
         - mountPath: {{ .Values.global.BUILDING_CONFIG_FILE_MOUNTPATH | quote }}
           name: {{ .Values.global.BUILDING_CONFIG_VOLUME | quote }}
-        - mountPath: /opt/rmf/install/rmf_demos_maps/share/rmf_demos_maps/office/pics/lvl1
-          name: lvl1-floorplan-configmap
-        - mountPath: /opt/rmf/install/rmf_demos_maps/share/rmf_demos_maps/office/pics/lvl5
-          name: lvl5-floorplan-configmap
-        - mountPath: /opt/rmf/install/rmf_demos_maps/share/rmf_demos_maps/office/pics/medinno
-          name: medinno-l1-configmap
-        - mountPath: /opt/rmf/install/rmf_demos_maps/share/rmf_demos_maps/office/pics/mir-medinno
-          name: mir-medinno-l1-configmap
+        - mountPath: /opt/rmf/install/rmf_demos_maps/share/rmf_demos_maps/office/pics/
+          name: floorplan-configmap
+
   volumes:
     - name: {{ .Values.global.DDS_CONFIG_VOLUME | quote }}
       configMap:
@@ -40,84 +35,74 @@ spec:
     - name: {{ .Values.global.BUILDING_CONFIG_VOLUME | quote }}
       configMap:
         name: {{ .Values.global.BUILDING_CONFIG_VOLUME | quote }}
-    - name: lvl1-floorplan-configmap
+    - name: floorplan-configmap
       configMap:
-        name: lvl1-floorplan-configmap
-    - name: lvl5-floorplan-configmap
-      configMap:
-        name: lvl5-floorplan-configmap
-    - name: medinno-l1-configmap
-      configMap:
-        name: medinno-l1-configmap
-    - name: mir-medinno-l1-configmap
-      configMap:
-        name: mir-medinno-l1-configmap
+        name: floorplan-configmap
 
+---
+apiVersion: v1
+kind: Pod
+namespace: 
+metadata:
+  name: kone-lift
+spec:
+  restartPolicy: Always
+  hostNetwork: true
+  containers:
+    - name: kone-lift
+      image: {{ .Values.registryUrl }}/rmf-deployment/kone
+      imagePullPolicy: Always
+      env:
+        - name: {{ .Values.global.DDS_ENV | quote }}
+          value: {{ .Values.global.DDS_CONFIG | quote }}
+        - name: ROS_DOMAIN_ID
+          value: {{ .Values.global.ROS_DOMAIN_ID | quote }}
+        - name: RMW_IMPLEMENTATION
+          value: {{ .Values.global.RMW_IMPLEMENTATION | quote }}
+      volumeMounts:
+        - mountPath: {{ .Values.global.DDS_CONFIG_MOUNTPATH | quote }}
+          name: {{ .Values.global.DDS_CONFIG_VOLUME | quote }}
+        - mountPath: {{ .Values.kone.KONE_ENV_MOUNT | quote }}
+          name: kone-configmap
+  volumes:
+    - name: {{ .Values.global.DDS_CONFIG_VOLUME | quote }}
+      configMap:
+        name: {{ .Values.global.DDS_CONFIG_VOLUME | quote }}
+    - name: kone-configmap
+      configMap:
+        name: kone-configmap
 
-# ---
-# apiVersion: v1
-# kind: Pod
-# namespace: 
-# metadata:
-#   name: kone-lift
-# spec:
-#   restartPolicy: Always
-#   hostNetwork: true
-#   containers:
-#     - name: kone-lift
-#       image: {{ .Values.registryUrl }}/rmf-deployment/kone
-#       imagePullPolicy: Always
-#       env:
-#         - name: {{ .Values.global.DDS_ENV | quote }}
-#           value: {{ .Values.global.DDS_CONFIG | quote }}
-#         - name: ROS_DOMAIN_ID
-#           value: {{ .Values.global.ROS_DOMAIN_ID | quote }}
-#         - name: RMW_IMPLEMENTATION
-#           value: {{ .Values.global.RMW_IMPLEMENTATION | quote }}
-#       volumeMounts:
-#         - mountPath: {{ .Values.global.DDS_CONFIG_MOUNTPATH | quote }}
-#           name: {{ .Values.global.DDS_CONFIG_VOLUME | quote }}
-#         - mountPath: {{ .Values.kone.KONE_ENV_MOUNT | quote }}
-#           name: kone-configmap
-#   volumes:
-#     - name: {{ .Values.global.DDS_CONFIG_VOLUME | quote }}
-#       configMap:
-#         name: {{ .Values.global.DDS_CONFIG_VOLUME | quote }}
-#     - name: kone-configmap
-#       configMap:
-#         name: kone-configmap
-
-# ---
-# apiVersion: v1
-# kind: Pod
-# namespace: 
-# metadata:
-#   name: dorma-door
-# spec:
-#   restartPolicy: Always
-#   hostNetwork: true
-#   containers:
-#     - name: dorma-door
-#       image: {{ .Values.registryUrl }}/rmf-deployment/dorma
-#       imagePullPolicy: Always
-#       env:
-#         - name: {{ .Values.global.DDS_ENV | quote }}
-#           value: {{ .Values.global.DDS_CONFIG | quote }}
-#         - name: ROS_DOMAIN_ID
-#           value: {{ .Values.global.ROS_DOMAIN_ID | quote }}
-#         - name: RMW_IMPLEMENTATION
-#           value: {{ .Values.global.RMW_IMPLEMENTATION | quote }}
-#         - name: CONFIG_FILE
-#           value: {{ .Values.dorma.DORMA_CONFIG_FILE | quote }}
-#       volumeMounts: # TODO DOCUMENT WHAT IS GOING ON HERE
-#         - mountPath: {{ .Values.global.DDS_CONFIG_MOUNTPATH | quote }}
-#           name: {{ .Values.global.DDS_CONFIG_VOLUME | quote }}
-#         - mountPath: {{ .Values.dorma.DORMA_ENV_MOUNT | quote }}
-#           name: dorma-configmap
-#   volumes:
-#     - name: {{ .Values.global.DDS_CONFIG_VOLUME | quote }}
-#       configMap:
-#         name: {{ .Values.global.DDS_CONFIG_VOLUME | quote }}
-#     - name: dorma-configmap
-#       configMap:
-#         name: dorma-configmap
+---
+apiVersion: v1
+kind: Pod
+namespace: 
+metadata:
+  name: dorma-door
+spec:
+  restartPolicy: Always
+  hostNetwork: true
+  containers:
+    - name: dorma-door
+      image: {{ .Values.registryUrl }}/rmf-deployment/dorma
+      imagePullPolicy: Always
+      env:
+        - name: {{ .Values.global.DDS_ENV | quote }}
+          value: {{ .Values.global.DDS_CONFIG | quote }}
+        - name: ROS_DOMAIN_ID
+          value: {{ .Values.global.ROS_DOMAIN_ID | quote }}
+        - name: RMW_IMPLEMENTATION
+          value: {{ .Values.global.RMW_IMPLEMENTATION | quote }}
+        - name: CONFIG_FILE
+          value: {{ .Values.dorma.DORMA_CONFIG_FILE | quote }}
+      volumeMounts: # TODO DOCUMENT WHAT IS GOING ON HERE
+        - mountPath: {{ .Values.global.DDS_CONFIG_MOUNTPATH | quote }}
+          name: {{ .Values.global.DDS_CONFIG_VOLUME | quote }}
+        - mountPath: {{ .Values.dorma.DORMA_ENV_MOUNT | quote }}
+          name: dorma-configmap
+  volumes:
+    - name: {{ .Values.global.DDS_CONFIG_VOLUME | quote }}
+      configMap:
+        name: {{ .Values.global.DDS_CONFIG_VOLUME | quote }}
+    - name: dorma-configmap
+      configMap:
+        name: dorma-configmap

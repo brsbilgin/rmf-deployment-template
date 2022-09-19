@@ -1,0 +1,20 @@
+building_name: galen
+levels:
+  L1:
+    lanes: []
+    vertices: []
+  L5:
+    lanes:
+    - - 0
+      - 1
+      - {speed_limit: 0}
+    - - 1
+      - 0
+      - {speed_limit: 0}
+    vertices:
+    - - -47.732767537505595
+      - -12.640654640475848
+      - {name: r3_1}
+    - - -43.08126999286698
+      - -12.694816782764264
+      - {name: r3_2}

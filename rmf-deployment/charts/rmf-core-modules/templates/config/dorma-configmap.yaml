@@ -5,4 +5,4 @@ metadata:
   name: dorma-configmap
 data:
   {{.Values.dorma.DORMA_ENV}}: |-
-{{ .Files.Get "dorma-config.yaml" | indent 4}} # TODO Standardise naming convention for config yaml
+{{ .Files.Get "site-specific/configs/dorma-config-keys.yaml" | indent 4}} # TODO Standardise naming convention for config yaml

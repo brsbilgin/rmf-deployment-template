@@ -1,15 +1,19 @@
 apiVersion: v1
 data:
   1.yaml: |- # Hospi
-{{ .Files.Get "1.yaml" | indent 4}}
+{{ .Files.Get "site-specific/nav_graphs/1.yaml" | indent 4}}
   3.yaml: |- # MiR
-{{ .Files.Get "3.yaml" | indent 4}} 
+{{ .Files.Get "site-specific/nav_graphs/3.yaml" | indent 4}} 
   4.yaml: |- # Delta
-{{ .Files.Get "4.yaml" | indent 4}}
+{{ .Files.Get "site-specific/nav_graphs/4.yaml" | indent 4}}
   5.yaml: |- # Kabam
-{{ .Files.Get "5.yaml" | indent 4}}
-  9.yaml: |- # Medisys
-{{ .Files.Get "9.yaml" | indent 4}}
+{{ .Files.Get "site-specific/nav_graphs/5.yaml" | indent 4}}
+  6.yaml: |- # Lionbot r3
+{{ .Files.Get "site-specific/nav_graphs/6.yaml" | indent 4}}
+  7.yaml: |- # Lionbot leoscrub
+{{ .Files.Get "site-specific/nav_graphs/7.yaml" | indent 4}}
+  # 9.yaml: |- # Medisys
+# {{ .Files.Get "site-specific/nav_graphs/9.yaml" | indent 4}}
 kind: ConfigMap
 metadata:
   creationTimestamp: "2022-09-07T11:59:12Z"

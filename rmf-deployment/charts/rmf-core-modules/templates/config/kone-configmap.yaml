@@ -5,4 +5,4 @@ metadata:
   name: kone-configmap
 data:
   {{.Values.kone.KONE_ENV}}: |-
-{{ .Files.Get "kone-env.yaml" | indent 4}}
+{{ .Files.Get "site-specific/configs/kone-config-keys.yaml" | indent 4}}

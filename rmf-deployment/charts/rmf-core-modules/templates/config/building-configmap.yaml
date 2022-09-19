@@ -4,9 +4,7 @@ kind: ConfigMap
 metadata:
   name: building-configmap
 data:
-  {{.Values.global.RMF_BUILDING_MAP}}: |-
-{{ .Files.Get "galen.building.yaml" | indent 4}}
+  galen.building.yaml: |-
+{{ .Files.Get "site-specific/building_yamls/galen.building.yaml" | indent 4}}
   lionsbot.building.yaml: |-
-{{ .Files.Get "lionsbot.building.yaml" | indent 4}}
-  medinno.building.yaml: |-
-{{ .Files.Get "medinno.building.yaml" | indent 4}}
+{{ .Files.Get "site-specific/building_yamls/lionsbot.building.yaml" | indent 4}}

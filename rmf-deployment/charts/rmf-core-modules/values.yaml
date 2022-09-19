@@ -14,16 +14,16 @@ global:
   BUILDING_CONFIG_VOLUME: building-configmap
   BUILDING_CONFIG_FILE_MOUNTPATH: /opt/rmf/install/rmf_demos_maps/share/rmf_demos_maps/office
   BUILDING_PICS_CONFIG_FILE_MOUNTPATH: /opt/rmf/install/rmf_demos_maps/share/rmf_demos_maps/office/pics
-  # RMF_BUILDING_MAP_SERVER_CONFIG_PATH: "/opt/rmf/install/rmf_demos_maps/share/rmf_demos_maps/office/galen.building.yaml"
-  # RMF_BUILDING_MAP: "galen.building.yaml"
-  RMF_BUILDING_MAP: "medinno.building.yaml"
-  RMF_BUILDING_MAP_SERVER_CONFIG_PATH: "/opt/rmf/install/rmf_demos_maps/share/rmf_demos_maps/office/medinno.building.yaml"
+  RMF_BUILDING_MAP_SERVER_CONFIG_PATH: "/opt/rmf/install/rmf_demos_maps/share/rmf_demos_maps/office/galen.building.yaml"
+  RMF_BUILDING_MAP: "galen.building.yaml"
 
   RMF_USE_SIM_TIME: "false"
   RMF_BIDDING_TIME_WINDOW: "2.0"
   RMF_TRAJECTORY_VISUALIZER_LEVEL_NAME: "L1"
   RMF_FAILOVER_MODE: "false"
   RMF_SERVER_URI: "ws://localhost:8001"
+
+  NAV_GRAPH_MOUNT_PATH: /opt/rmf/install/rmf_demos_maps/share/rmf_demos_maps/maps/office/nav_graphs
 
 # Not in use
 simulation:
@@ -44,7 +44,7 @@ dorma:
 panasonic:
   RMF_FLEET_ADAPTER_CONTROL_TYPE: full_control
   RMF_FLEET_ADAPTER_FLEET_NAME: hospi_robot
-  RMF_FLEET_ADAPTER_NAV_GRAPH_FILE: /opt/rmf/install/rmf_demos_maps/share/rmf_demos_maps/maps/office/nav_graphs/1.yaml
+  RMF_FLEET_ADAPTER_NAV_GRAPH_FILE: 1.yaml
   RMF_FLEET_ADAPTER_LINEAR_VELOCITY: "0.6"
   RMF_FLEET_ADAPTER_ANGULAR_VELOCITY: "0.6"
   RMF_FLEET_ADAPTER_LINEAR_ACCELERATION: "0.75"
@@ -94,7 +94,7 @@ panasonic:
 delta:
   RMF_FLEET_ADAPTER_CONTROL_TYPE: full_control
   RMF_FLEET_ADAPTER_FLEET_NAME: delta
-  RMF_FLEET_ADAPTER_NAV_GRAPH_FILE: /opt/rmf/install/rmf_demos_maps/share/rmf_demos_maps/maps/office/nav_graphs/4.yaml
+  RMF_FLEET_ADAPTER_NAV_GRAPH_FILE: 4.yaml
   RMF_FLEET_ADAPTER_LINEAR_VELOCITY: "0.6"
   RMF_FLEET_ADAPTER_ANGULAR_VELOCITY: "0.6"
   RMF_FLEET_ADAPTER_LINEAR_ACCELERATION: "0.75"
@@ -133,7 +133,7 @@ delta:
 kabam:
   RMF_FLEET_ADAPTER_CONTROL_TYPE: full_control
   RMF_FLEET_ADAPTER_FLEET_NAME: kabam_fleet
-  RMF_FLEET_ADAPTER_NAV_GRAPH_FILE: /opt/rmf/install/rmf_demos_maps/share/rmf_demos_maps/maps/office/nav_graphs/5.yaml
+  RMF_FLEET_ADAPTER_NAV_GRAPH_FILE: 5.yaml
   RMF_FLEET_ADAPTER_LINEAR_VELOCITY: "0.6"
   RMF_FLEET_ADAPTER_ANGULAR_VELOCITY: "0.6"
   RMF_FLEET_ADAPTER_LINEAR_ACCELERATION: "0.75"
@@ -172,15 +172,15 @@ kabam:
 mir:
   RMF_FLEET_ADAPTER_EXEC: fleet_adapter_mircw
   RMF_FLEET_ADAPTER_CONFIG_FILE: /opt/rmf/install/fleet_adapter_mircw/share/fleet_adapter_mircw/config/config.yaml
-  RMF_FLEET_ADAPTER_NAV_GRAPH_FILE: /opt/rmf/install/rmf_demos_maps/share/rmf_demos_maps/maps/office/nav_graphs/9.yaml
+  RMF_FLEET_ADAPTER_NAV_GRAPH_FILE: 3.yaml
   RMF_FLEET_ADAPTER_SERVER_URI: ws://localhost:7878
 
 lionsbot:
   r3:
     RMF_FLEET_ADAPTER: fleet_adapter_r3
-    RMF_FLEET_ADAPTER_CONFIG_FILE: /opt/rmf/install/fleet_adapter_r3/share/fleet_adapter_r3/config.yaml
-    RMF_FLEET_ADAPTER_NAV_GRAPH_FILE: /opt/rmf/src/lionsbot/fleet_adapter_r3/maps/02office/0.yaml
+    RMF_FLEET_ADAPTER_CONFIG_FILE: /opt/rmf/install/fleet_adapter_r3/share/fleet_adapter_r3/config/config.yaml
+    RMF_FLEET_ADAPTER_NAV_GRAPH_FILE: 6.yaml
   leoscrub:
     RMF_FLEET_ADAPTER: fleet_adapter_leoscrub
-    RMF_FLEET_ADAPTER_CONFIG_FILE: /opt/rmf/install/fleet_adapter_leoscrub/share/fleet_adapter_leoscrub/config.yaml
-    RMF_FLEET_ADAPTER_NAV_GRAPH_FILE: /opt/rmf/src/lionsbot/fleet_adapter_leoscrub/maps/1.yaml
+    RMF_FLEET_ADAPTER_CONFIG_FILE: /opt/rmf/install/fleet_adapter_leoscrub/share/fleet_adapter_leoscrub/config/config.yaml
+    RMF_FLEET_ADAPTER_NAV_GRAPH_FILE: 7.yaml

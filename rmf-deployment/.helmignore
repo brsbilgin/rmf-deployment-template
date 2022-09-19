@@ -39,17 +39,24 @@ rmf-simulation-modules.yaml
 floorplan-configmap-bkup.yaml
 *bkup.*
 
-# delta.yaml
-# kabam.yaml
-# omron.yaml
-# panasonic.yaml
+delta.yaml
+kabam.yaml
+omron.yaml
+panasonic.yaml
 # mir.yaml
-# lionsbot.yaml
-# cyclonedds-configmap.yaml
-# building-configmap.yaml
-# nav-graph-configmap.yaml
-# floorplan-configmap.yaml
-# dorma-configmap.yaml
+lionsbot.yaml
+
 # rmf-core-modules.yaml
 # rmf-web-modules.yaml
 # rmf-site-modules.yaml
+
+# building-configmap.yaml
+# cyclonedds-configmap.yaml
+# dorma-configmap.yaml
+# floorplan-configmap.yaml
+keycloak-secrets.yaml
+# kone-configmap.yaml
+# lionsbot-leoscrub-configmap.yaml
+# lionsbot-r3-configmap.yaml
+# mir-configmap.yaml
+# nav-graph-configmap.yaml

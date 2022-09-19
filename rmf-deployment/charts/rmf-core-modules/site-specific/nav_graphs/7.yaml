@@ -1,0 +1,53 @@
+building_name: lionsbot_office
+levels:
+  office_plan:
+    lanes:
+    - - 0
+      - 1
+      - {speed_limit: 0}
+    - - 1
+      - 0
+      - {speed_limit: 0}
+    - - 1
+      - 2
+      - {speed_limit: 0}
+    - - 2
+      - 1
+      - {speed_limit: 0}
+    - - 3
+      - 4
+      - {speed_limit: 0}
+    - - 4
+      - 3
+      - {speed_limit: 0}
+    - - 4
+      - 5
+      - {dock_name: omega_clean, speed_limit: 0}
+    - - 5
+      - 4
+      - {speed_limit: 0, undock_name: omega_clean}
+    - - 1
+      - 3
+      - {speed_limit: 0}
+    - - 3
+      - 1
+      - {speed_limit: 0}
+    vertices:
+    - - 16.71032819386226
+      - -43.8173414920382
+      - {is_charger: true, name: dock_home}
+    - - 16.689676789587367
+      - -42.943148593686786
+      - {name: ''}
+    - - 16.61285755629429
+      - -41.661314932691845
+      - {name: omega_path}
+    - - 20.284018785799045
+      - -42.73049898879822
+      - {name: ''}
+    - - 23.00117492651802
+      - -42.86338628587144
+      - {name: ''}
+    - - 23.863595526780365
+      - -42.960856923439415
+      - {dock_name: omega_clean, is_cleaning_zone: true, name: omega_clean}

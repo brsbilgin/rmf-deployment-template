@@ -1,0 +1,198 @@
+building_name: galen
+levels:
+  L1:
+    lanes:
+    - - 0
+      - 1
+      - {speed_limit: 0}
+    - - 1
+      - 0
+      - {speed_limit: 0}
+    - - 1
+      - 2
+      - {speed_limit: 0}
+    - - 2
+      - 1
+      - {speed_limit: 0}
+    - - 3
+      - 2
+      - {speed_limit: 0}
+    - - 2
+      - 3
+      - {speed_limit: 0}
+    - - 4
+      - 5
+      - {speed_limit: 0}
+    - - 5
+      - 4
+      - {speed_limit: 0}
+    - - 5
+      - 3
+      - {speed_limit: 0}
+    - - 3
+      - 5
+      - {speed_limit: 0}
+    vertices:
+    - - 7.258516456702581
+      - -8.559141324118706
+      - {lift: A, lift_cabin: A, name: ''}
+    - - 9.417249891738416
+      - -8.549857175162458
+      - {name: L1_liftA_wait}
+    - - 10.650522478544673
+      - -8.573067547553078
+      - {is_passthrough_point: false, name: ''}
+    - - 10.691288332598015
+      - -10.838484294231613
+      - {is_charger: false, is_parking_spot: false, is_passthrough_point: false, name: ''}
+    - - 15.958945647664544
+      - -12.742325639741383
+      - {is_charger: true, is_holding_point: true, is_parking_spot: true, name: kabam_L1_0}
+    - - 14.528258293506807
+      - -12.253050989747138
+      - {is_holding_point: true, name: ''}
+  L5:
+    lanes:
+    - - 0
+      - 1
+      - {speed_limit: 0}
+    - - 1
+      - 0
+      - {speed_limit: 0}
+    - - 2
+      - 3
+      - {speed_limit: 0}
+    - - 3
+      - 2
+      - {speed_limit: 0}
+    - - 2
+      - 4
+      - {speed_limit: 0}
+    - - 4
+      - 2
+      - {speed_limit: 0}
+    - - 4
+      - 5
+      - {speed_limit: 0}
+    - - 5
+      - 4
+      - {speed_limit: 0}
+    - - 5
+      - 6
+      - {speed_limit: 0}
+    - - 6
+      - 5
+      - {speed_limit: 0}
+    - - 6
+      - 7
+      - {speed_limit: 0}
+    - - 7
+      - 6
+      - {speed_limit: 0}
+    - - 5
+      - 8
+      - {speed_limit: 0}
+    - - 8
+      - 5
+      - {speed_limit: 0}
+    - - 9
+      - 10
+      - {speed_limit: 0}
+    - - 10
+      - 9
+      - {speed_limit: 0}
+    - - 10
+      - 11
+      - {speed_limit: 0}
+    - - 11
+      - 10
+      - {speed_limit: 0}
+    - - 11
+      - 12
+      - {door_name: dormakaba_door1, speed_limit: 0}
+    - - 12
+      - 11
+      - {door_name: dormakaba_door1, speed_limit: 0}
+    - - 12
+      - 13
+      - {speed_limit: 0}
+    - - 13
+      - 12
+      - {speed_limit: 0}
+    - - 12
+      - 14
+      - {speed_limit: 0}
+    - - 14
+      - 12
+      - {speed_limit: 0}
+    - - 13
+      - 15
+      - {speed_limit: 0}
+    - - 15
+      - 13
+      - {speed_limit: 0}
+    - - 15
+      - 16
+      - {speed_limit: 0}
+    - - 16
+      - 15
+      - {speed_limit: 0}
+    - - 8
+      - 16
+      - {speed_limit: 0}
+    - - 16
+      - 8
+      - {speed_limit: 0}
+    vertices:
+    - - -44.26451608321756
+      - -14.268812382628639
+      - {is_charger: true, is_parking_spot: true, name: kabam_1}
+    - - -41.34446663001948
+      - -14.302813504300865
+      - {name: kabam_2}
+    - - 10.428417863069221
+      - -2.7842403992881515
+      - {name: ''}
+    - - 11.889556677956982
+      - -0.7355730660632114
+      - {is_charger: false, is_holding_point: true, is_parking_spot: true, name: kabam_L5_0}
+    - - 10.37051250551341
+      - -5.631694571278769
+      - {is_holding_point: false, is_parking_spot: false, is_passthrough_point: false,
+        name: ''}
+    - - 10.386473832270504
+      - -8.517133154069207
+      - {is_passthrough_point: false, name: ''}
+    - - 9.27093773641328
+      - -8.537525519170543
+      - {name: ''}
+    - - 7.345416542312485
+      - -8.481119367174067
+      - {lift: A, lift_cabin: A, name: ''}
+    - - 10.386278595990753
+      - -10.65941458243697
+      - {name: ''}
+    - - -19.146157286252105
+      - -15.02108922402347
+      - {name: kabam_Lab_0}
+    - - -19.17143527754775
+      - -16.403992179792105
+      - {name: kabam_Lab_1}
+    - - -19.14793153028741
+      - -17.506344630025346
+      - {name: ''}
+    - - -19.18851445272609
+      - -22.87350336887487
+      - {name: ''}
+    - - -15.188988263884198
+      - -22.920073941996204
+      - {name: kabam_L5_1}
+    - - -24.053788255881948
+      - -22.84220519523029
+      - {name: kabam_L5_2}
+    - - -4.3491551867987965
+      - -22.97548538111696
+      - {name: ''}
+    - - 10.420492056920189
+      - -23.133700329491308
+      - {name: ''}

@@ -5,4 +5,4 @@ metadata:
   name: lionsbot-leoscrub-configmap
 data:
   config.yaml: |-
-{{ .Files.Get "lionsbot-leoscrub-config.yaml" | indent 4}}
+{{ .Files.Get "site-specific/configs/lionsbot-leoscrub-config-keys.yaml" | indent 4}}

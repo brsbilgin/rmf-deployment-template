@@ -4,4 +4,4 @@ kind: ConfigMap
 metadata:
   name: cyclonedds-configmap
 data:
-  cyclonedds.xml: {{ .Files.Get "cyclonedds.xml" | indent 4}}
+  cyclonedds.xml: {{ .Files.Get "site-specific/cyclonedds.xml" | indent 4}}

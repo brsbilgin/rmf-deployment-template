@@ -5,4 +5,4 @@ metadata:
   name: mir-configmap
 data:
   config.yaml: |-
-{{ .Files.Get "mir-config.yaml" | indent 4}}
+{{ .Files.Get "site-specific/configs/mir-config-keys.yaml" | indent 4}}
