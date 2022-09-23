@@ -1,0 +1,8 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ecobot-configmap
+data:
+  config.yaml: |-
+{{ .Files.Get "site-specific/configs/ecobot-config-keys.yaml" | indent 4}}

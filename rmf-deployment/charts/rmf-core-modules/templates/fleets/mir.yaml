@@ -10,7 +10,7 @@ spec:
  containers:
    - name: mir-fleet-adapter
      image: {{ .Values.registryUrl }}/rmf-deployment/medisys_mir
-     imagePullPolicy: Always
+     imagePullPolicy: IfNotPresent
      env:
        - name: RMF_USE_SIM_TIME
          value: {{ .Values.global.RMF_USE_SIM_TIME | quote }}

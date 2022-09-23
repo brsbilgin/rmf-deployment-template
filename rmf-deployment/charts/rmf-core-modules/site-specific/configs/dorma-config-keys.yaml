@@ -1,0 +1,8 @@
+# RMF door parameters
+
+door:
+  name: "dummy" # Name of the door as defined in rmf_traffic_editor
+  api_endpoint: "https://1du2gus5pf.execute-api.us-west-2.amazonaws.com" # Get this parameter and others from Dormakaba
+  header_key: "x-api-key"
+  header_value: "dummy"
+  door_id: "dummy"

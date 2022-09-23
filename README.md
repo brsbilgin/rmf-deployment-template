@@ -64,6 +64,11 @@ helm install rmf-deployment rmf-deployment
 helm uninstall rmf-deployment
 k3sup-killall.sh && k3sup-uninstall.sh
 ```
+## To Restart
+```
+k3sup install --local --user ubuntu --cluster --k3s-extra-args '--flannel-iface=ens5 --no-deploy traefik --write-kubeconfig-mode --docker' --k3s-version v1.24.4+k3s1
+helm install rmf-deployment rmf-deployment
+```
 > Use the .helmignore file is used to specify files you don't want to include in your helm chart deployment.
 
 ## Helper commands

@@ -8,11 +8,9 @@ data:
 {{ .Files.Get "site-specific/nav_graphs/4.yaml" | indent 4}}
   5.yaml: |- # Kabam
 {{ .Files.Get "site-specific/nav_graphs/5.yaml" | indent 4}}
-  6.yaml: |- # Lionbot r3
-{{ .Files.Get "site-specific/nav_graphs/6.yaml" | indent 4}}
-  7.yaml: |- # Lionbot leoscrub
-{{ .Files.Get "site-specific/nav_graphs/7.yaml" | indent 4}}
-  # 9.yaml: |- # Medisys
+  8.yaml: |- # Lionbot leoscrub
+{{ .Files.Get "site-specific/nav_graphs/8.yaml" | indent 4}}
+  # 8.yaml: |- # Medisys
 # {{ .Files.Get "site-specific/nav_graphs/9.yaml" | indent 4}}
 kind: ConfigMap
 metadata:

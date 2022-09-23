@@ -1,0 +1,51 @@
+version: "3.7"
+services:
+
+  rmf-simulation:
+    image: ghcr.io/open-rmf/rmf_deployment_template/rmf-simulation:galactic
+    command: bash -c "ros2 launch rmf_demos_gz office.launch.xml headless:=1 server_uri:=ws://localhost:8000/_internal"
+    build:
+      context: .
+      dockerfile: rmf/rmf-building-map-server.Dockerfile
+    volumes:
+      - type: bind
+        source: ../rmf-deployment/charts/rmf-core-modules/site-specific/cyclonedds.xml
+        target: /etc/cyclonedds
+    network_mode: host
+    environment:
+      - RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+      - CYCLONEDDS_URI=/etc/cyclonedds
+      # - ROS_DOMAIN_ID=15
+      - RMF_USE_SIM_TIME=true
+
+  rmf-web-rmf-server:
+    image: ghcr.io/open-rmf/rmf_deployment_template/rmf-web-rmf-server:galactic
+    build:
+      context: .
+      dockerfile: rmf/rmf-building-map-server.Dockerfile
+    volumes:
+      - type: bind
+        source: ../rmf-deployment/charts/rmf-core-modules/site-specific/cyclonedds.xml
+        target: /etc/cyclonedds
+    network_mode: host
+    environment:
+      - RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+      - CYCLONEDDS_URI=/etc/cyclonedds
+      # - ROS_DOMAIN_ID=15
+      - RMF_USE_SIM_TIME=true
+
+  rmf-web-dashboard-local:
+    image: ghcr.io/open-rmf/rmf_deployment_template/rmf-web-dashboard-local:galactic
+    build:
+      context: .
+      dockerfile: rmf/rmf-building-map-server.Dockerfile
+    volumes:
+      - type: bind
+        source: ../rmf-deployment/charts/rmf-core-modules/site-specific/cyclonedds.xml
+        target: /etc/cyclonedds
+    network_mode: host
+    environment:
+      - RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+      - CYCLONEDDS_URI=/etc/cyclonedds
+      # - ROS_DOMAIN_ID=15
+      - RMF_USE_SIM_TIME=true

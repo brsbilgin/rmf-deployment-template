@@ -8,6 +8,12 @@ levels:
     - - 1
       - 0
       - {speed_limit: 0}
+    - - 1
+      - 2
+      - {speed_limit: 0}
+    - - 2
+      - 1
+      - {speed_limit: 0}
     - - 2
       - 3
       - {speed_limit: 0}
@@ -26,42 +32,30 @@ levels:
     - - 5
       - 4
       - {speed_limit: 0}
-    - - 0
-      - 4
-      - {speed_limit: 0}
-    - - 4
-      - 0
-      - {speed_limit: 0}
-    - - 5
-      - 6
-      - {speed_limit: 0}
-    - - 6
-      - 5
-      - {speed_limit: 0}
     - - 6
       - 7
-      - {speed_limit: 0}
+      - {speed_limit: 0, undock_name: L1_1_pick_up}
     - - 7
       - 6
-      - {speed_limit: 0}
-    - - 8
-      - 9
-      - {speed_limit: 0, undock_name: L1_1_pick_up}
-    - - 9
-      - 8
       - {dock_name: L1_1_pick_up, speed_limit: 0}
+    - - 7
+      - 8
+      - {dock_name: L1_1_drop_off, speed_limit: 0}
+    - - 8
+      - 7
+      - {speed_limit: 0, undock_name: L1_1_drop_off}
     - - 9
       - 10
-      - {dock_name: L1_1_drop_off, speed_limit: 0}
+      - {dock_name: L1_0_pick_up, speed_limit: 0}
     - - 10
       - 9
-      - {speed_limit: 0, undock_name: L1_1_drop_off}
+      - {speed_limit: 0, undock_name: L1_0_pick_up}
     - - 11
-      - 12
-      - {speed_limit: 0}
-    - - 12
+      - 9
+      - {speed_limit: 0, undock_name: L1_0_drop_off}
+    - - 9
       - 11
-      - {speed_limit: 0}
+      - {dock_name: L1_0_drop_off, speed_limit: 0}
     - - 12
       - 13
       - {speed_limit: 0}
@@ -69,11 +63,17 @@ levels:
       - 12
       - {speed_limit: 0}
     - - 7
-      - 14
+      - 12
       - {speed_limit: 0}
-    - - 14
+    - - 12
       - 7
       - {speed_limit: 0}
+    - - 12
+      - 14
+      - {speed_limit: 0}
+    - - 14
+      - 12
+      - {speed_limit: 0}
     - - 14
       - 15
       - {speed_limit: 0}
@@ -81,54 +81,36 @@ levels:
       - 14
       - {speed_limit: 0}
     - - 15
-      - 9
-      - {speed_limit: 0}
-    - - 9
-      - 15
-      - {speed_limit: 0}
-    - - 9
-      - 11
-      - {speed_limit: 0}
-    - - 11
-      - 9
-      - {speed_limit: 0}
-    - - 13
       - 16
       - {speed_limit: 0}
     - - 16
-      - 13
+      - 15
       - {speed_limit: 0}
     - - 16
+      - 9
+      - {speed_limit: 0}
+    - - 9
+      - 16
+      - {speed_limit: 0}
+    - - 1
       - 17
       - {speed_limit: 0}
     - - 17
-      - 16
+      - 1
       - {speed_limit: 0}
     - - 17
       - 18
-      - {dock_name: L1_0_pick_up, speed_limit: 0}
+      - {speed_limit: 0}
     - - 18
       - 17
-      - {speed_limit: 0, undock_name: L1_0_pick_up}
-    - - 19
-      - 17
-      - {speed_limit: 0, undock_name: L1_0_drop_off}
-    - - 17
-      - 19
-      - {dock_name: L1_0_drop_off, speed_limit: 0}
-    - - 14
-      - 9
       - {speed_limit: 0}
-    - - 9
-      - 14
+    - - 5
+      - 12
+      - {speed_limit: 0}
+    - - 12
+      - 5
       - {speed_limit: 0}
     vertices:
-    - - 9.417249891738416
-      - -8.549857175162458
-      - {name: L1_liftA_wait}
-    - - 7.258516456702581
-      - -8.559141324118706
-      - {lift: A, lift_cabin: A, name: ''}
     - - 10.685042632391085
       - -2.193844398361281
       - {is_holding_point: true, name: mir_L1_1}
@@ -156,24 +138,6 @@ levels:
     - - 10.229528524055924
       - -21.573576929632285
       - {dock_name: L1_1_drop_off, name: L1_1_drop_off}
-    - - 14.452043870711428
-      - -22.936912003180154
-      - {name: ''}
-    - - 18.38607538889008
-      - -23.17534582864742
-      - {name: ''}
-    - - 18.780482916822304
-      - -24.525345488239953
-      - {name: ''}
-    - - 11.381100600047203
-      - -19.693958772762908
-      - {name: ''}
-    - - 13.85642351449108
-      - -20.9646211594566
-      - {is_parking_spot: true, name: L1_mir_start}
-    - - 22.116193235447877
-      - -24.419506190138733
-      - {name: ''}
     - - 24.670853422790593
       - -25.01512654635908
       - {name: L1_0_entry}
@@ -183,6 +147,27 @@ levels:
     - - 26.073941534142033
       - -25.068046195409693
       - {dock_name: L1_0_drop_off, name: L1_0_drop_off}
+    - - 12.817105239516248
+      - -20.97787217205779
+      - {name: ''}
+    - - 13.85642351449108
+      - -20.9646211594566
+      - {is_parking_spot: true, name: L1_mir_start}
+    - - 14.452043870711428
+      - -22.936912003180154
+      - {name: ''}
+    - - 17.819404697142392
+      - -21.850666575299197
+      - {name: ''}
+    - - 19.06694111279961
+      - -25.403288374084376
+      - {name: ''}
+    - - 9.393448709868764
+      - -5.6299079270684755
+      - {name: L1_liftB_wait}
+    - - 7.188210128697543
+      - -5.687385249243063
+      - {lift: B, lift_cabin: B, name: ''}
   L5:
     lanes:
     - - 0
@@ -210,6 +195,12 @@ levels:
       - 4
       - {speed_limit: 0}
     - - 6
+      - 3
+      - {speed_limit: 0}
+    - - 3
+      - 6
+      - {speed_limit: 0}
+    - - 6
       - 7
       - {speed_limit: 0}
     - - 7
@@ -222,12 +213,6 @@ levels:
       - 7
       - {speed_limit: 0}
     - - 8
-      - 3
-      - {speed_limit: 0}
-    - - 3
-      - 8
-      - {speed_limit: 0}
-    - - 8
       - 9
       - {speed_limit: 0}
     - - 9
@@ -247,33 +232,39 @@ levels:
       - {speed_limit: 0}
     - - 11
       - 12
-      - {speed_limit: 0}
+      - {door_name: dormakaba_door1, speed_limit: 0}
     - - 12
       - 11
-      - {speed_limit: 0}
-    - - 12
+      - {door_name: dormakaba_door1, speed_limit: 0}
+    - - 11
       - 13
       - {speed_limit: 0}
     - - 13
-      - 12
+      - 11
       - {speed_limit: 0}
-    - - 13
-      - 14
-      - {door_name: dormakaba_door1, speed_limit: 0}
-    - - 14
-      - 13
-      - {door_name: dormakaba_door1, speed_limit: 0}
     - - 14
       - 15
       - {speed_limit: 0}
     - - 15
       - 14
       - {speed_limit: 0}
-    - - 13
+    - - 15
+      - 3
+      - {speed_limit: 0}
+    - - 3
+      - 15
+      - {speed_limit: 0}
+    - - 12
       - 16
       - {speed_limit: 0}
     - - 16
-      - 13
+      - 12
+      - {speed_limit: 0}
+    - - 16
+      - 17
+      - {speed_limit: 0}
+    - - 17
+      - 16
       - {speed_limit: 0}
     vertices:
     - - -38.174124560574256
@@ -295,12 +286,6 @@ levels:
     - - 13.444803914603035
       - -1.3049330625235673
       - {is_holding_point: true, is_parking_spot: true, name: mir_L5_0}
-    - - 7.345416542312485
-      - -8.481119367174067
-      - {lift: A, lift_cabin: A, name: ''}
-    - - 9.27093773641328
-      - -8.537525519170543
-      - {name: ''}
     - - 10.386473832270504
       - -8.517133154069207
       - {is_passthrough_point: false, name: ''}
@@ -319,12 +304,21 @@ levels:
     - - -19.291110196531548
       - -23.317257124748046
       - {is_charger: false, is_parking_spot: true, name: door_test}
-    - - -19.228576384930207
-      - -17.946792463811462
+    - - -19.256319527361285
+      - -18.001703144796277
       - {name: ''}
-    - - -20.35735083024059
-      - -16.916382654331183
-      - {name: mir_Lab_0}
     - - -22.78557835545537
       - -23.31332957583098
       - {name: mir_L5_2}
+    - - 7.379150602673526
+      - -5.584005399552985
+      - {lift: B, lift_cabin: B, name: ''}
+    - - 9.435758389436522
+      - -5.647793305049958
+      - {name: ''}
+    - - -34.7817202371323
+      - -17.774987473661888
+      - {name: ''}
+    - - -39.87078542125755
+      - -16.817382456452705
+      - {name: mir_Lab_0}

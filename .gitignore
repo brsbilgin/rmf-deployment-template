@@ -129,11 +129,9 @@ dmypy.json
 .pyre/
 
 kone-env.yaml
-dorma-config.yaml
-lionsbot-*config.yaml
 kubeconfig
 
 mir_testing
 
-keys*
+keys_backup/
 tryout

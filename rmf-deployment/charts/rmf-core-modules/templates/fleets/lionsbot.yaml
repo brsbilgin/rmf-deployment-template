@@ -42,46 +42,46 @@ spec:
      configMap:
        name: lionsbot-r3-configmap
 
----
-apiVersion: v1
-kind: Pod
-namespace: 
-metadata:
- name: fleet-adapter-leoscrub
-spec:
- restartPolicy: Always
- hostNetwork: true
- containers:
-   - name: fleet-adapter-leoscrub
-     image: {{ .Values.registryUrl }}/rmf-deployment/lionsbot-leoscrub
-     imagePullPolicy: Always
-     env:
-       - name: RMF_USE_SIM_TIME
-         value: {{ .Values.global.RMF_USE_SIM_TIME | quote }}
-       - name: {{ .Values.global.DDS_ENV | quote }}
-         value: {{ .Values.global.DDS_CONFIG | quote }}
-       - name: ROS_DOMAIN_ID
-         value: {{ .Values.global.ROS_DOMAIN_ID | quote }}
-       - name: RMF_FLEET_ADAPTER
-         value: {{ .Values.lionsbot.leoscrub.RMF_FLEET_ADAPTER | quote }}
-       - name: RMF_FLEET_ADAPTER_CONFIG_FILE
-         value: {{ .Values.lionsbot.leoscrub.RMF_FLEET_ADAPTER_CONFIG_FILE | quote }}
-       - name: RMF_FLEET_ADAPTER_NAV_GRAPH_FILE
-         value: {{ .Values.global.NAV_GRAPH_MOUNT_PATH }}/{{ .Values.lionsbot.leoscrub.RMF_FLEET_ADAPTER_NAV_GRAPH_FILE}}
-     volumeMounts:
-       - mountPath: /etc/cyclonedds
-         name: cyclonedds-configmap
-       - mountPath: /opt/rmf/src/lionsbot/fleet_adapter_leoscrub/maps
-         name: nav-graph-configmap
-       - mountPath: /opt/rmf/install/fleet_adapter_leoscrub/share/fleet_adapter_leoscrub/config
-         name: lionsbot-leoscrub-configmap
- volumes:
-   - name: cyclonedds-configmap
-     configMap:
-       name: cyclonedds-configmap
-   - name: nav-graph-configmap
-     configMap:
-       name: nav-graph-configmap
-   - name: lionsbot-leoscrub-configmap
-     configMap:
-       name: lionsbot-leoscrub-configmap
+# ---
+# apiVersion: v1
+# kind: Pod
+# namespace: 
+# metadata:
+#  name: fleet-adapter-leoscrub
+# spec:
+#  restartPolicy: Always
+#  hostNetwork: true
+#  containers:
+#    - name: fleet-adapter-leoscrub
+#      image: {{ .Values.registryUrl }}/rmf-deployment/lionsbot-leoscrub
+#      imagePullPolicy: Always
+#      env:
+#        - name: RMF_USE_SIM_TIME
+#          value: {{ .Values.global.RMF_USE_SIM_TIME | quote }}
+#        - name: {{ .Values.global.DDS_ENV | quote }}
+#          value: {{ .Values.global.DDS_CONFIG | quote }}
+#        - name: ROS_DOMAIN_ID
+#          value: {{ .Values.global.ROS_DOMAIN_ID | quote }}
+#        - name: RMF_FLEET_ADAPTER
+#          value: {{ .Values.lionsbot.leoscrub.RMF_FLEET_ADAPTER | quote }}
+#        - name: RMF_FLEET_ADAPTER_CONFIG_FILE
+#          value: {{ .Values.lionsbot.leoscrub.RMF_FLEET_ADAPTER_CONFIG_FILE | quote }}
+#        - name: RMF_FLEET_ADAPTER_NAV_GRAPH_FILE
+#          value: {{ .Values.global.NAV_GRAPH_MOUNT_PATH }}/{{ .Values.lionsbot.leoscrub.RMF_FLEET_ADAPTER_NAV_GRAPH_FILE}}
+#      volumeMounts:
+#        - mountPath: /etc/cyclonedds
+#          name: cyclonedds-configmap
+#        - mountPath: {{ .Values.global.NAV_GRAPH_MOUNT_PATH }}
+#          name: nav-graph-configmap
+#        - mountPath: /opt/rmf/install/fleet_adapter_leoscrub/share/fleet_adapter_leoscrub/config
+#          name: lionsbot-leoscrub-configmap
+#  volumes:
+#    - name: cyclonedds-configmap
+#      configMap:
+#        name: cyclonedds-configmap
+#    - name: nav-graph-configmap
+#      configMap:
+#        name: nav-graph-configmap
+#    - name: lionsbot-leoscrub-configmap
+#      configMap:
+#        name: lionsbot-leoscrub-configmap

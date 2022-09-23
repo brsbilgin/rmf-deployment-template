@@ -9,22 +9,16 @@ levels:
       - 0
       - {speed_limit: 0}
     - - 2
-      - 1
-      - {speed_limit: 0}
-    - - 1
-      - 2
-      - {speed_limit: 0}
-    - - 0
       - 3
       - {speed_limit: 0}
     - - 3
-      - 0
+      - 2
       - {speed_limit: 0}
-    - - 3
+    - - 2
       - 4
       - {speed_limit: 0}
     - - 4
-      - 3
+      - 2
       - {speed_limit: 0}
     - - 4
       - 5
@@ -38,28 +32,52 @@ levels:
     - - 6
       - 5
       - {speed_limit: 0}
+    - - 6
+      - 1
+      - {speed_limit: 0}
+    - - 1
+      - 6
+      - {speed_limit: 0}
+    - - 6
+      - 7
+      - {speed_limit: 0}
+    - - 7
+      - 6
+      - {speed_limit: 0}
+    - - 5
+      - 8
+      - {speed_limit: 0}
+    - - 8
+      - 5
+      - {speed_limit: 0}
     vertices:
-    - - 10.662169865417058
-      - -5.617838533425355
-      - {is_passthrough_point: false, name: ''}
+    - - 7.188210128697543
+      - -5.687385249243063
+      - {lift: B, lift_cabin: B, name: ''}
     - - 9.393448709868764
       - -5.6299079270684755
       - {name: L1_liftB_wait}
-    - - 7.258516456702581
-      - -5.678438705703406
-      - {lift: B, lift_cabin: B, name: ''}
-    - - 10.650522478544673
-      - -8.573067547553078
-      - {is_passthrough_point: false, name: ''}
+    - - 11.971488072310397
+      - -14.201118644830304
+      - {is_holding_point: true, name: ''}
+    - - 12.571666101654722
+      - -15.711058870532735
+      - {is_charger: true, is_holding_point: true, is_parking_spot: true, name: panasonic_L1_0}
     - - 10.691288332598015
       - -10.838484294231613
       - {is_charger: false, is_parking_spot: false, is_passthrough_point: false, name: ''}
-    - - 13.303341440761173
-      - -13.171675328290753
+    - - 11.648230885924688
+      - -8.519979095794172
+      - {name: ''}
+    - - 10.662169865417058
+      - -5.617838533425355
+      - {is_passthrough_point: false, name: ''}
+    - - 11.838049531402875
+      - -3.74066801582626
       - {is_holding_point: true, name: ''}
-    - - 15.252168708031668
-      - -14.706935960237496
-      - {is_charger: true, is_holding_point: true, is_parking_spot: true, name: panasonic_L1_0}
+    - - 13.441759661563406
+      - -5.639023273316428
+      - {is_holding_point: true, name: ''}
   L5:
     lanes:
     - - 0
@@ -86,35 +104,35 @@ levels:
     - - 0
       - 4
       - {speed_limit: 0}
+    - - 4
+      - 5
+      - {speed_limit: 0}
+    - - 5
+      - 4
+      - {speed_limit: 0}
     - - 5
       - 6
-      - {speed_limit: 0.3}
+      - {speed_limit: 0}
     - - 6
       - 5
-      - {speed_limit: 0.3}
-    - - 6
-      - 7
-      - {speed_limit: 0}
-    - - 7
-      - 6
       - {speed_limit: 0}
     - - 7
       - 8
-      - {speed_limit: 0.3}
+      - {speed_limit: 0}
     - - 8
       - 7
-      - {speed_limit: 0.3}
-    - - 7
-      - 9
-      - {speed_limit: 0.3}
-    - - 9
-      - 7
-      - {speed_limit: 0.3}
-    - - 4
-      - 10
       - {speed_limit: 0}
-    - - 10
-      - 4
+    - - 8
+      - 9
+      - {speed_limit: 0}
+    - - 9
+      - 8
+      - {speed_limit: 0}
+    - - 9
+      - 1
+      - {speed_limit: 0}
+    - - 1
+      - 9
       - {speed_limit: 0}
     - - 10
       - 11
@@ -122,53 +140,35 @@ levels:
     - - 11
       - 10
       - {speed_limit: 0}
+    - - 11
+      - 12
+      - {door_name: dormakaba_door1, speed_limit: 0}
+    - - 12
+      - 11
+      - {door_name: dormakaba_door1, speed_limit: 0}
+    - - 12
+      - 7
+      - {speed_limit: 0}
+    - - 7
+      - 12
+      - {speed_limit: 0}
     - - 12
       - 13
       - {speed_limit: 0}
     - - 13
       - 12
       - {speed_limit: 0}
-    - - 13
+    - - 10
       - 14
       - {speed_limit: 0}
     - - 14
-      - 13
+      - 10
       - {speed_limit: 0}
     - - 14
-      - 1
+      - 15
       - {speed_limit: 0}
-    - - 1
+    - - 15
       - 14
-      - {speed_limit: 0}
-    - - 15
-      - 16
-      - {speed_limit: 0}
-    - - 16
-      - 15
-      - {speed_limit: 0}
-    - - 16
-      - 17
-      - {door_name: dormakaba_door1, speed_limit: 0}
-    - - 17
-      - 16
-      - {door_name: dormakaba_door1, speed_limit: 0}
-    - - 17
-      - 12
-      - {speed_limit: 0}
-    - - 12
-      - 17
-      - {speed_limit: 0}
-    - - 17
-      - 18
-      - {speed_limit: 0}
-    - - 18
-      - 17
-      - {speed_limit: 0}
-    - - 15
-      - 19
-      - {speed_limit: 0}
-    - - 19
-      - 15
       - {speed_limit: 0}
     vertices:
     - - 10.386473832270504
@@ -187,21 +187,6 @@ levels:
       - -5.631694571278769
       - {is_holding_point: false, is_parking_spot: false, is_passthrough_point: false,
         name: ''}
-    - - -33.89620228236757
-      - -12.355129322975152
-      - {is_charger: true, is_parking_spot: true, name: w4}
-    - - -36.8850758292978
-      - -12.238894798884214
-      - {name: w3, spawn_robot_name: neuronbot2, spawn_robot_type: neuronbot}
-    - - -36.953836111972905
-      - -14.686245912479627
-      - {name: ''}
-    - - -39.240416867001876
-      - -12.60438314539055
-      - {name: w1, spawn_robot_name: missybot, spawn_robot_type: missy}
-    - - -36.86293179355462
-      - -16.407819777231285
-      - {name: w2}
     - - 10.428417863069221
       - -2.7842403992881515
       - {name: ''}
@@ -220,15 +205,18 @@ levels:
     - - -20.745893725679224
       - -17.899244247941656
       - {name: panasonic_Lab_0}
-    - - -18.913236851302933
-      - -17.921368487324607
+    - - -19.34815661478209
+      - -17.894754065207028
       - {name: ''}
-    - - -18.889543287009168
-      - -23.315473953393585
+    - - -19.349715326850983
+      - -23.337219461009653
       - {name: ''}
     - - -21.475649218856425
       - -23.291337385322034
       - {name: panasonic_L5_2}
     - - -36.523808064057135
       - -17.719872117788125
+      - {name: panasonic_Lab_2}
+    - - -39.22297301665396
+      - -14.906293200632977
       - {name: panasonic_Lab_1}

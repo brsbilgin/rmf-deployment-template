@@ -1,0 +1,47 @@
+building_name: galen
+levels:
+  L1:
+    lanes: []
+    vertices: []
+  L5:
+    lanes:
+    - - 0
+      - 1
+      - {speed_limit: 0}
+    - - 1
+      - 0
+      - {speed_limit: 0}
+    - - 1
+      - 2
+      - {dock_name: path_727, speed_limit: 0}
+    - - 2
+      - 1
+      - {speed_limit: 0, undock_name: path_727}
+    - - 1
+      - 3
+      - {speed_limit: 0}
+    - - 3
+      - 1
+      - {speed_limit: 0}
+    - - 3
+      - 4
+      - {dock_name: path_194, speed_limit: 0}
+    - - 4
+      - 3
+      - {speed_limit: 0, undock_name: path_194}
+    vertices:
+    - - -20.896701381474664
+      - -11.353046652094633
+      - {is_charger: true, is_holding_point: true, is_parking_spot: true, name: entrance_2}
+    - - -20.87324649318471
+      - -13.092065280908361
+      - {name: path_727_start}
+    - - -22.056295421361938
+      - -13.057584732069358
+      - {dock_name: path_727, is_cleaning_zone: true, name: path_727}
+    - - -20.74777371837685
+      - -16.406946007132994
+      - {name: path_194_start}
+    - - -21.97748559879974
+      - -16.30515872871831
+      - {dock_name: path_194, is_cleaning_zone: true, name: path_194}

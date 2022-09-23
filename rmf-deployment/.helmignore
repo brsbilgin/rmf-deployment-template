@@ -43,11 +43,11 @@ delta.yaml
 kabam.yaml
 omron.yaml
 panasonic.yaml
-# mir.yaml
+mir.yaml
 lionsbot.yaml
 
-# rmf-core-modules.yaml
-# rmf-web-modules.yaml
+rmf-core-modules.yaml
+rmf-web-modules.yaml
 # rmf-site-modules.yaml
 
 # building-configmap.yaml
@@ -56,7 +56,7 @@ lionsbot.yaml
 # floorplan-configmap.yaml
 keycloak-secrets.yaml
 # kone-configmap.yaml
-# lionsbot-leoscrub-configmap.yaml
-# lionsbot-r3-configmap.yaml
-# mir-configmap.yaml
-# nav-graph-configmap.yaml
+lionsbot-leoscrub-configmap.yaml
+lionsbot-r3-configmap.yaml
+mir-configmap.yaml
+nav-graph-configmap.yaml
