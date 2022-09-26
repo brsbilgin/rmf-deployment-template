@@ -1,7 +1,7 @@
 
 replicas: 1
 registryUrl: ghcr.io/sharp-rmf
-hostName: rmf-deployment-template.open-rmf.org
+hostName: ec2-3-0-43-86.ap-southeast-1.compute.amazonaws.com
 
 global:
   ROS_DOMAIN_ID: 15
